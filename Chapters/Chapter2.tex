@@ -1,0 +1,77 @@
+% Chapter 1
+
+\chapter{Progetto Aziendale} % Main chapter title
+
+\label{Chapter2} % For referencing the chapter elsewhere, use \ref{Chapter1} 
+
+\lhead{Capitolo 2. \emph{Progetto Aziendale}} % This is for the header on each page - perhaps a shortened title
+
+%----------------------------------------------------------------------------------------
+
+\section{Introduzione al riconoscimento facciale}
+
+Il riconoscimento facciale è una tecnica di intelligenza artificiale utilizzata per identificare o verificare l'identità di una persona a partire da una o più immagini che la ritraggono.\\
+Si può affermare che si tratti di un riconoscimento di pattern (dove il pattern da riconoscere è un volto umano), che avviene mediante tecniche di elaborazione di immagini digitali.\\Vi sono vari sistemi che adempiono a tali risultati, suddivisibili in due categorie:
+
+\begin{itemize}
+  \item \textbf{Semplici}: partono dal presupposto che un viso sia composto da tutti gli elementi comuni tipici della nostra specie (occhi, naso ,bocca, orecchie, etc.). Costo computazionale ridotto, funzionano efficacemente nel caso il volto sia frontale rispetto all'immagine digitale
+  \item \textbf{Complessi}: sommano al sistema semplice algoritmi che riescono ad eseguire riconoscimento facciale anche nel caso il volto sia ruotato o comunque non in visione frontale. Costo computazionale generalmente molto più elevato. 
+\end{itemize}
+
+Data una singola immagine digitale, i maggiori problemi che si incontrano nella ricerca della presenza di volti sono:
+
+\begin{itemize}
+\item Qualità dell'immagine non adeguata (sgranata, non a fuoco, risoluzione insufficiente)
+\item Condizione d'illuminazione non ottimale (sottoesposizione o sovraesposizione eccessiva)
+\item Espressioni facciali non campionate (quando i volti presenti assumono espressioni non presenti nel template di confronto)
+\item Variazione della "messa in posa"
+\item Variazioni d'aspetto del volto (ad esempio i tratti di un volto di una persona di origine asiatica saranno notevolmente diversi da quelli di una persona di origine europea)
+\end{itemize}
+
+\subsection{Machine Learning}
+
+Data la complessità del problema è difficile creare una soluzione unica che abbia un'accuratezza soddisfacente. Una delle vie migliori per costruire un classificatore è collezionare una grande database di esempi di classificazione, creare una funzione di classificazione parametrizzata e successivamente ottimizzarla in modo tale da avere degli output che coincidano al meglio con gli esempi. Questa metodologia è definita machine learning
+
+%----------------------------------------------------------------------------------------
+
+\section{Obiettivi}
+
+L'esigenza dell'azienda ospitante era quello di creare un core engine di riconoscimento facciale che potesse funzionare su dispositivi Android. Questo senza inficiare eccessivamente le prestazioni dell'applicazione principale. Tale esigenza era dettata dal fatto di voler applicare tale funzionalità ad una famiglia di prodotti molto diversificata come ad esempio:
+
+\begin{itemize}
+\item \textbf{Oculistica} Applicazione rivolta direttamente ai clienti dove questi ultimi avrebbero potuto provare gli occhiali (overlay del modello 3D dell'occhiale) selezionandoli direttamente dal dispositivo mobile
+\item \textbf{Intrattenimento}
+\begin{itemize}
+\item \textbf{Videogiochi} 
+utilizzo del riconoscimento facciale per variare l'esperienza d'utilizzo del videogioco a seconda della posizione e della quantità di volti presenti di fronte al dispositivo
+\item \textbf{Generico}
+utilizzo del riconoscimento facciale per applicazioni fun generiche come il face-swapping 
+\end{itemize}
+\end{itemize}  
+
+Oltre a tale obiettivo puramente tecnico è stata richiesta l'integrazione verso i social network per la condivisione di foto o di altri contenuti multimediali.
+
+%----------------------------------------------------------------------------------------
+
+\section{Aspettative}
+
+L'azienda si aspettava che l'obiettivo principale venisse raggiunto.
+
+%----------------------------------------------------------------------------------------
+
+\section{Vincoli}
+
+Non sono stati imposti vincoli particolari per quanto riguarda lo svolgimento del progetto di stage.
+I vincoli imposti sono:
+\begin{itemize}
+ 	\item Utilizzare il linguaggio Java per l'implementazione del prototipo
+ 	\item Utilizzare Eclipse e nello specifico l'SDK Android che fornisce le librerie API e gli strumenti di sviluppo necessarie al build, test e debug delle applicazioni
+ 	\item Garantire flessibilità ed estensibilità futura del prototipo
+ 	\item Garantire il funzionamento per le versioni Android uguali o superiori alla v2.3 (Gingerbread)
+ 	\item Fornire documentazione adeguata sul prototipo implementato
+ 	\item Rispettare la timeline assegnata
+\end{itemize}
+
+
+%----------------------------------------------------------------------------------------
+
