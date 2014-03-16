@@ -1,18 +1,11 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2014.1.29)  30 JAN 2014 19:41
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.3.2)  15 MAR 2014 18:10
 entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
 **Riferimenti.tex
-(C:\workspace\1911_up\Dropbox\thesis\Appendices\Riferimenti.tex
+(./Riferimenti.tex
 LaTeX2e <2011/06/27>
-Babel <v3.8m> and hyphenation patterns for english, afrikaans, ancientgreek, ar
-abic, armenian, assamese, basque, bengali, bokmal, bulgarian, catalan, coptic, 
-croatian, czech, danish, dutch, esperanto, estonian, farsi, finnish, french, ga
-lician, german, german-x-2013-05-26, greek, gujarati, hindi, hungarian, iceland
-ic, indonesian, interlingua, irish, italian, kannada, kurmanji, latin, latvian,
- lithuanian, malayalam, marathi, mongolian, mongolianlmc, monogreek, ngerman, n
-german-x-2013-05-26, nynorsk, oriya, panjabi, pinyin, polish, portuguese, roman
-ian, russian, sanskrit, serbian, slovak, slovenian, spanish, swedish, swissgerm
-an, tamil, telugu, turkish, turkmen, ukenglish, ukrainian, uppersorbian, usengl
-ishmax, welsh, loaded.
+Babel <3.9f> and hyphenation patterns for 2 languages loaded.
 ! Undefined control sequence.
 l.3 \chapter
             {Riferimenti} % Main appendix title
@@ -77,6 +70,1508 @@ Overfull \hbox (70.86305pt too wide) in paragraph at lines 7--8
 []\OT1/cmr/m/it/10 Riferimenti 
  []
 
+
+! LaTeX Error: Environment thebibliography undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.9 \begin{thebibliography}
+                           {1}
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+! LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.9 \begin{thebibliography}{1
+                             }
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+Missing character: There is no 1 in font nullfont!
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 9--10
+[] 
+ []
+
+
+! LaTeX Error: Lonely \item--perhaps a missing list environment.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.10 \bibitem{1}
+                 Hemanta Saikia, Kanak Chandra Sarma {\em Approaches and iss...
+
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+! Undefined control sequence.
+<argument> \@listctr 
+                     
+l.10 \bibitem{1}
+                 Hemanta Saikia, Kanak Chandra Sarma {\em Approaches and iss...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! You can't use `\relax' after \the.
+<recently read> \c@ 
+                    
+l.10 \bibitem{1}
+                 Hemanta Saikia, Kanak Chandra Sarma {\em Approaches and iss...
+I'm forgetting what you said and using zero instead.
+
+\bibcite{1}{0}
+Missing character: There is no H in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no m in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no S in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no k in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no K in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no k in font nullfont!
+Missing character: There is no C in font nullfont!
+Missing character: There is no h in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no S in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no m in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no . in font nullfont!
+
+Overfull \hbox (16.12212pt too wide) in paragraph at lines 10--11
+\OT1/cmr/m/it/10 Ap-
+ []
+
+
+Overfull \hbox (36.9275pt too wide) in paragraph at lines 10--11
+\OT1/cmr/m/it/10 proaches
+ []
+
+
+Overfull \hbox (15.84436pt too wide) in paragraph at lines 10--11
+\OT1/cmr/m/it/10 and
+ []
+
+
+Overfull \hbox (10.73326pt too wide) in paragraph at lines 10--11
+\OT1/cmr/m/it/10 is-
+ []
+
+
+Overfull \hbox (18.14433pt too wide) in paragraph at lines 10--11
+\OT1/cmr/m/it/10 sues
+ []
+
+
+Overfull \hbox (8.68884pt too wide) in paragraph at lines 10--11
+\OT1/cmr/m/it/10 in
+ []
+
+
+Overfull \hbox (14.31102pt too wide) in paragraph at lines 10--11
+\OT1/cmr/m/it/10 Of-
+ []
+
+
+Overfull \hbox (19.16653pt too wide) in paragraph at lines 10--11
+\OT1/cmr/m/it/10 fline
+ []
+
+
+Overfull \hbox (16.86655pt too wide) in paragraph at lines 10--11
+\OT1/cmr/m/it/10 Sig-
+ []
+
+
+Overfull \hbox (14.31102pt too wide) in paragraph at lines 10--11
+\OT1/cmr/m/it/10 na-
+ []
+
+
+Overfull \hbox (16.9943pt too wide) in paragraph at lines 10--11
+\OT1/cmr/m/it/10 ture
+ []
+
+
+Overfull \hbox (19.06096pt too wide) in paragraph at lines 10--11
+\OT1/cmr/m/it/10 Ver-
+ []
+
+
+Overfull \hbox (6.6444pt too wide) in paragraph at lines 10--11
+\OT1/cmr/m/it/10 i-
+ []
+
+
+Overfull \hbox (9.19994pt too wide) in paragraph at lines 10--11
+\OT1/cmr/m/it/10 fi-
+ []
+
+
+Overfull \hbox (12.77766pt too wide) in paragraph at lines 10--11
+\OT1/cmr/m/it/10 ca-
+ []
+
+
+Overfull \hbox (17.12212pt too wide) in paragraph at lines 10--11
+\OT1/cmr/m/it/10 tion
+ []
+
+
+Overfull \hbox (18.14432pt too wide) in paragraph at lines 10--11
+\OT1/cmr/m/it/10 Sys-
+ []
+
+
+Overfull \hbox (16.09988pt too wide) in paragraph at lines 10--11
+\OT1/cmr/m/it/10 tem 
+ []
+
+
+! LaTeX Error: Lonely \item--perhaps a missing list environment.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.11 \bibitem{2}
+                By: Adrian Kaehler, Gary Bradski {\em Computer Vision in C++...
+
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+! Undefined control sequence.
+<argument> \@listctr 
+                     
+l.11 \bibitem{2}
+                By: Adrian Kaehler, Gary Bradski {\em Computer Vision in C++...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! You can't use `\relax' after \the.
+<recently read> \c@ 
+                    
+l.11 \bibitem{2}
+                By: Adrian Kaehler, Gary Bradski {\em Computer Vision in C++...
+I'm forgetting what you said and using zero instead.
+
+\bibcite{2}{0}
+Missing character: There is no B in font nullfont!
+Missing character: There is no y in font nullfont!
+Missing character: There is no : in font nullfont!
+Missing character: There is no A in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no K in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no h in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no G in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no y in font nullfont!
+Missing character: There is no B in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no k in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no . in font nullfont!
+
+Overfull \hbox (24.02206pt too wide) in paragraph at lines 11--12
+\OT1/cmr/m/it/10 Com-
+ []
+
+
+Overfull \hbox (22.6165pt too wide) in paragraph at lines 11--12
+\OT1/cmr/m/it/10 puter
+ []
+
+
+Overfull \hbox (14.07768pt too wide) in paragraph at lines 11--12
+\OT1/cmr/m/it/10 Vi-
+ []
+
+
+Overfull \hbox (17.8888pt too wide) in paragraph at lines 11--12
+\OT1/cmr/m/it/10 sion
+ []
+
+
+Overfull \hbox (8.68884pt too wide) in paragraph at lines 11--12
+\OT1/cmr/m/it/10 in
+ []
+
+
+Overfull \hbox (22.48875pt too wide) in paragraph at lines 11--12
+\OT1/cmr/m/it/10 C++
+ []
+
+
+Overfull \hbox (18.14433pt too wide) in paragraph at lines 11--12
+\OT1/cmr/m/it/10 with
+ []
+
+
+Overfull \hbox (13.03323pt too wide) in paragraph at lines 11--12
+\OT1/cmr/m/it/10 the
+ []
+
+
+Overfull \hbox (37.07753pt too wide) in paragraph at lines 11--12
+\OT1/cmr/m/it/10 OpenCV
+ []
+
+
+Overfull \hbox (12.91656pt too wide) in paragraph at lines 11--12
+\OT1/cmr/m/it/10 Li-
+ []
+
+
+Overfull \hbox (22.4887pt too wide) in paragraph at lines 11--12
+\OT1/cmr/m/it/10 brary 
+ []
+
+
+! LaTeX Error: Lonely \item--perhaps a missing list environment.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.12 \bibitem{3}
+                 Justino, Yacoubi, Bortolozzi, Sabourin {\em An Off-Line Sig...
+
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+! Undefined control sequence.
+<argument> \@listctr 
+                     
+l.12 \bibitem{3}
+                 Justino, Yacoubi, Bortolozzi, Sabourin {\em An Off-Line Sig...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! You can't use `\relax' after \the.
+<recently read> \c@ 
+                    
+l.12 \bibitem{3}
+                 Justino, Yacoubi, Bortolozzi, Sabourin {\em An Off-Line Sig...
+I'm forgetting what you said and using zero instead.
+
+\bibcite{3}{0}
+Missing character: There is no J in font nullfont!
+Missing character: There is no u in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no Y in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no u in font nullfont!
+Missing character: There is no b in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no B in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no z in font nullfont!
+Missing character: There is no z in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no S in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no b in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no u in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no . in font nullfont!
+
+Overfull \hbox (12.79991pt too wide) in paragraph at lines 12--13
+\OT1/cmr/m/it/10 An
+ []
+
+
+Overfull \hbox (17.37766pt too wide) in paragraph at lines 12--13
+\OT1/cmr/m/it/10 Off-
+ []
+
+
+Overfull \hbox (19.56097pt too wide) in paragraph at lines 12--13
+\OT1/cmr/m/it/10 Line
+ []
+
+
+Overfull \hbox (16.86655pt too wide) in paragraph at lines 12--13
+\OT1/cmr/m/it/10 Sig-
+ []
+
+
+Overfull \hbox (14.31102pt too wide) in paragraph at lines 12--13
+\OT1/cmr/m/it/10 na-
+ []
+
+
+Overfull \hbox (16.9943pt too wide) in paragraph at lines 12--13
+\OT1/cmr/m/it/10 ture
+ []
+
+
+Overfull \hbox (19.06096pt too wide) in paragraph at lines 12--13
+\OT1/cmr/m/it/10 Ver-
+ []
+
+
+Overfull \hbox (6.6444pt too wide) in paragraph at lines 12--13
+\OT1/cmr/m/it/10 i-
+ []
+
+
+Overfull \hbox (9.19994pt too wide) in paragraph at lines 12--13
+\OT1/cmr/m/it/10 fi-
+ []
+
+
+Overfull \hbox (12.77766pt too wide) in paragraph at lines 12--13
+\OT1/cmr/m/it/10 ca-
+ []
+
+
+Overfull \hbox (17.12212pt too wide) in paragraph at lines 12--13
+\OT1/cmr/m/it/10 tion
+ []
+
+
+Overfull \hbox (18.14432pt too wide) in paragraph at lines 12--13
+\OT1/cmr/m/it/10 Sys-
+ []
+
+
+Overfull \hbox (16.09988pt too wide) in paragraph at lines 12--13
+\OT1/cmr/m/it/10 tem
+ []
+
+
+Overfull \hbox (15.0999pt too wide) in paragraph at lines 12--13
+\OT1/cmr/m/it/10 Us-
+ []
+
+
+Overfull \hbox (13.2888pt too wide) in paragraph at lines 12--13
+\OT1/cmr/m/it/10 ing
+ []
+
+
+Overfull \hbox (25.36652pt too wide) in paragraph at lines 12--13
+\OT1/cmr/m/it/10 HMM
+ []
+
+
+Overfull \hbox (15.84436pt too wide) in paragraph at lines 12--13
+\OT1/cmr/m/it/10 and
+ []
+
+
+Overfull \hbox (35.46365pt too wide) in paragraph at lines 12--13
+\OT1/cmr/m/it/10 Grapho-
+ []
+
+
+Overfull \hbox (16.35544pt too wide) in paragraph at lines 12--13
+\OT1/cmr/m/it/10 me-
+ []
+
+
+Overfull \hbox (6.89993pt too wide) in paragraph at lines 12--13
+\OT1/cmr/m/it/10 t-
+ []
+
+
+Overfull \hbox (11.88324pt too wide) in paragraph at lines 12--13
+\OT1/cmr/m/it/10 ric
+ []
+
+
+Overfull \hbox (18.53873pt too wide) in paragraph at lines 12--13
+\OT1/cmr/m/it/10 Fea-
+ []
+
+
+Overfull \hbox (21.08316pt too wide) in paragraph at lines 12--13
+\OT1/cmr/m/it/10 tures 
+ []
+
+
+! LaTeX Error: Lonely \item--perhaps a missing list environment.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.13 \bibitem{4}
+                 Yazan M. Al-Omari, Khairuddin Omar {\em State-of-the-Art in...
+
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+! Undefined control sequence.
+<argument> \@listctr 
+                     
+l.13 \bibitem{4}
+                 Yazan M. Al-Omari, Khairuddin Omar {\em State-of-the-Art in...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! You can't use `\relax' after \the.
+<recently read> \c@ 
+                    
+l.13 \bibitem{4}
+                 Yazan M. Al-Omari, Khairuddin Omar {\em State-of-the-Art in...
+I'm forgetting what you said and using zero instead.
+
+\bibcite{4}{0}
+Missing character: There is no Y in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no z in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no M in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no A in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no O in font nullfont!
+Missing character: There is no m in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no K in font nullfont!
+Missing character: There is no h in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no u in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no O in font nullfont!
+Missing character: There is no m in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no . in font nullfont!
+
+Overfull \hbox (25.55536pt too wide) in paragraph at lines 13--14
+\OT1/cmr/m/it/10 State-
+ []
+
+
+Overfull \hbox (11.75548pt too wide) in paragraph at lines 13--14
+\OT1/cmr/m/it/10 of-
+ []
+
+
+Overfull \hbox (16.61098pt too wide) in paragraph at lines 13--14
+\OT1/cmr/m/it/10 the-
+ []
+
+
+Overfull \hbox (14.71654pt too wide) in paragraph at lines 13--14
+\OT1/cmr/m/it/10 Art
+ []
+
+
+Overfull \hbox (8.68884pt too wide) in paragraph at lines 13--14
+\OT1/cmr/m/it/10 in
+ []
+
+
+Overfull \hbox (14.31102pt too wide) in paragraph at lines 13--14
+\OT1/cmr/m/it/10 Of-
+ []
+
+
+Overfull \hbox (19.16653pt too wide) in paragraph at lines 13--14
+\OT1/cmr/m/it/10 fline
+ []
+
+
+Overfull \hbox (16.86655pt too wide) in paragraph at lines 13--14
+\OT1/cmr/m/it/10 Sig-
+ []
+
+
+Overfull \hbox (14.31102pt too wide) in paragraph at lines 13--14
+\OT1/cmr/m/it/10 na-
+ []
+
+
+Overfull \hbox (16.9943pt too wide) in paragraph at lines 13--14
+\OT1/cmr/m/it/10 ture
+ []
+
+
+Overfull \hbox (19.06096pt too wide) in paragraph at lines 13--14
+\OT1/cmr/m/it/10 Ver-
+ []
+
+
+Overfull \hbox (6.6444pt too wide) in paragraph at lines 13--14
+\OT1/cmr/m/it/10 i-
+ []
+
+
+Overfull \hbox (9.19994pt too wide) in paragraph at lines 13--14
+\OT1/cmr/m/it/10 fi-
+ []
+
+
+Overfull \hbox (12.77766pt too wide) in paragraph at lines 13--14
+\OT1/cmr/m/it/10 ca-
+ []
+
+
+Overfull \hbox (17.12212pt too wide) in paragraph at lines 13--14
+\OT1/cmr/m/it/10 tion
+ []
+
+
+Overfull \hbox (18.14432pt too wide) in paragraph at lines 13--14
+\OT1/cmr/m/it/10 Sys-
+ []
+
+
+Overfull \hbox (16.09988pt too wide) in paragraph at lines 13--14
+\OT1/cmr/m/it/10 tem 
+ []
+
+
+! LaTeX Error: Lonely \item--perhaps a missing list environment.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.14 \bibitem{5}
+                 Adebayo Daramola, Samuel Ibiyemi {\em Offline Signature Rec...
+
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+! Undefined control sequence.
+<argument> \@listctr 
+                     
+l.14 \bibitem{5}
+                 Adebayo Daramola, Samuel Ibiyemi {\em Offline Signature Rec...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! You can't use `\relax' after \the.
+<recently read> \c@ 
+                    
+l.14 \bibitem{5}
+                 Adebayo Daramola, Samuel Ibiyemi {\em Offline Signature Rec...
+I'm forgetting what you said and using zero instead.
+
+\bibcite{5}{0}
+Missing character: There is no A in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no b in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no y in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no D in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no m in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no S in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no m in font nullfont!
+Missing character: There is no u in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no I in font nullfont!
+Missing character: There is no b in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no y in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no m in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no . in font nullfont!
+
+Overfull \hbox (14.31102pt too wide) in paragraph at lines 14--15
+\OT1/cmr/m/it/10 Of-
+ []
+
+
+Overfull \hbox (19.16653pt too wide) in paragraph at lines 14--15
+\OT1/cmr/m/it/10 fline
+ []
+
+
+Overfull \hbox (16.86655pt too wide) in paragraph at lines 14--15
+\OT1/cmr/m/it/10 Sig-
+ []
+
+
+Overfull \hbox (14.31102pt too wide) in paragraph at lines 14--15
+\OT1/cmr/m/it/10 na-
+ []
+
+
+Overfull \hbox (16.9943pt too wide) in paragraph at lines 14--15
+\OT1/cmr/m/it/10 ture
+ []
+
+
+Overfull \hbox (27.73862pt too wide) in paragraph at lines 14--15
+\OT1/cmr/m/it/10 Recog-
+ []
+
+
+Overfull \hbox (12.26659pt too wide) in paragraph at lines 14--15
+\OT1/cmr/m/it/10 ni-
+ []
+
+
+Overfull \hbox (17.12212pt too wide) in paragraph at lines 14--15
+\OT1/cmr/m/it/10 tion
+ []
+
+
+Overfull \hbox (13.03325pt too wide) in paragraph at lines 14--15
+\OT1/cmr/m/it/10 us-
+ []
+
+
+Overfull \hbox (13.2888pt too wide) in paragraph at lines 14--15
+\OT1/cmr/m/it/10 ing
+ []
+
+
+Overfull \hbox (19.18877pt too wide) in paragraph at lines 14--15
+\OT1/cmr/m/it/10 Hid-
+ []
+
+
+Overfull \hbox (15.33324pt too wide) in paragraph at lines 14--15
+\OT1/cmr/m/it/10 den
+ []
+
+
+Overfull \hbox (32.60533pt too wide) in paragraph at lines 14--15
+\OT1/cmr/m/it/10 Markov
+ []
+
+
+Overfull \hbox (25.83316pt too wide) in paragraph at lines 14--15
+\OT1/cmr/m/it/10 Model
+ []
+
+
+Overfull \hbox (33.54425pt too wide) in paragraph at lines 14--15
+\OT1/cmr/m/it/10 (HMM) 
+ []
+
+
+! LaTeX Error: Lonely \item--perhaps a missing list environment.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.15 \bibitem{6}
+                 Behrouz Vaseghi, Somayeh Hashemi {\em Offline signatures Re...
+
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+! Undefined control sequence.
+<argument> \@listctr 
+                     
+l.15 \bibitem{6}
+                 Behrouz Vaseghi, Somayeh Hashemi {\em Offline signatures Re...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! You can't use `\relax' after \the.
+<recently read> \c@ 
+                    
+l.15 \bibitem{6}
+                 Behrouz Vaseghi, Somayeh Hashemi {\em Offline signatures Re...
+I'm forgetting what you said and using zero instead.
+
+\bibcite{6}{0}
+Missing character: There is no B in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no h in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no u in font nullfont!
+Missing character: There is no z in font nullfont!
+Missing character: There is no V in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no g in font nullfont!
+Missing character: There is no h in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no S in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no m in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no y in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no h in font nullfont!
+Missing character: There is no H in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no h in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no m in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no . in font nullfont!
+
+Overfull \hbox (14.31102pt too wide) in paragraph at lines 15--16
+\OT1/cmr/m/it/10 Of-
+ []
+
+
+Overfull \hbox (19.16653pt too wide) in paragraph at lines 15--16
+\OT1/cmr/m/it/10 fline
+ []
+
+
+Overfull \hbox (15.33322pt too wide) in paragraph at lines 15--16
+\OT1/cmr/m/it/10 sig-
+ []
+
+
+Overfull \hbox (14.31102pt too wide) in paragraph at lines 15--16
+\OT1/cmr/m/it/10 na-
+ []
+
+
+Overfull \hbox (21.08316pt too wide) in paragraph at lines 15--16
+\OT1/cmr/m/it/10 tures
+ []
+
+
+Overfull \hbox (27.73862pt too wide) in paragraph at lines 15--16
+\OT1/cmr/m/it/10 Recog-
+ []
+
+
+Overfull \hbox (12.26659pt too wide) in paragraph at lines 15--16
+\OT1/cmr/m/it/10 ni-
+ []
+
+
+Overfull \hbox (17.12212pt too wide) in paragraph at lines 15--16
+\OT1/cmr/m/it/10 tion
+ []
+
+
+Overfull \hbox (18.14432pt too wide) in paragraph at lines 15--16
+\OT1/cmr/m/it/10 Sys-
+ []
+
+
+Overfull \hbox (16.09988pt too wide) in paragraph at lines 15--16
+\OT1/cmr/m/it/10 tem
+ []
+
+
+Overfull \hbox (13.03325pt too wide) in paragraph at lines 15--16
+\OT1/cmr/m/it/10 us-
+ []
+
+
+Overfull \hbox (13.2888pt too wide) in paragraph at lines 15--16
+\OT1/cmr/m/it/10 ing
+ []
+
+
+Overfull \hbox (15.72765pt too wide) in paragraph at lines 15--16
+\OT1/cmr/m/it/10 De-
+ []
+
+
+Overfull \hbox (24.91644pt too wide) in paragraph at lines 15--16
+\OT1/cmr/m/it/10 screte
+ []
+
+
+Overfull \hbox (15.84433pt too wide) in paragraph at lines 15--16
+\OT1/cmr/m/it/10 Co-
+ []
+
+
+Overfull \hbox (17.37767pt too wide) in paragraph at lines 15--16
+\OT1/cmr/m/it/10 sine
+ []
+
+
+Overfull \hbox (28.49423pt too wide) in paragraph at lines 15--16
+\OT1/cmr/m/it/10 Trans-
+ []
+
+
+Overfull \hbox (20.5721pt too wide) in paragraph at lines 15--16
+\OT1/cmr/m/it/10 form
+ []
+
+
+Overfull \hbox (15.84436pt too wide) in paragraph at lines 15--16
+\OT1/cmr/m/it/10 and
+ []
+
+
+Overfull \hbox (45.32195pt too wide) in paragraph at lines 15--16
+\OT1/cmr/m/it/10 VQ/HMM 
+ []
+
+
+! LaTeX Error: Lonely \item--perhaps a missing list environment.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.16 \bibitem{7}
+                 {\em Corso di Ingegneria del Software, facolt√† di Informat...
+
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+! Undefined control sequence.
+<argument> \@listctr 
+                     
+l.16 \bibitem{7}
+                 {\em Corso di Ingegneria del Software, facolt√† di Informat...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! You can't use `\relax' after \the.
+<recently read> \c@ 
+                    
+l.16 \bibitem{7}
+                 {\em Corso di Ingegneria del Software, facolt√† di Informat...
+I'm forgetting what you said and using zero instead.
+
+\bibcite{7}{0}
+Missing character: There is no √ in font cmti10!
+Missing character: There is no † in font cmti10!
+Missing character: There is no √ in font cmti10!
+Missing character: There is no † in font cmti10!
+Missing character: There is no . in font nullfont!
+
+Overfull \hbox (25.68317pt too wide) in paragraph at lines 16--17
+\OT1/cmr/m/it/10 Corso
+ []
+
+
+Overfull \hbox (8.17773pt too wide) in paragraph at lines 16--17
+\OT1/cmr/m/it/10 di
+ []
+
+
+Overfull \hbox (13.05547pt too wide) in paragraph at lines 16--17
+\OT1/cmr/m/it/10 In-
+ []
+
+
+Overfull \hbox (16.8665pt too wide) in paragraph at lines 16--17
+\OT1/cmr/m/it/10 geg-
+ []
+
+
+Overfull \hbox (13.7999pt too wide) in paragraph at lines 16--17
+\OT1/cmr/m/it/10 ne-
+ []
+
+
+Overfull \hbox (12.39436pt too wide) in paragraph at lines 16--17
+\OT1/cmr/m/it/10 ria
+ []
+
+
+Overfull \hbox (12.26659pt too wide) in paragraph at lines 16--17
+\OT1/cmr/m/it/10 del
+ []
+
+
+Overfull \hbox (20.69986pt too wide) in paragraph at lines 16--17
+\OT1/cmr/m/it/10 Soft-
+ []
+
+
+Overfull \hbox (23.12761pt too wide) in paragraph at lines 16--17
+\OT1/cmr/m/it/10 ware,
+ []
+
+
+Overfull \hbox (11.75548pt too wide) in paragraph at lines 16--17
+\OT1/cmr/m/it/10 fa-
+ []
+
+
+Overfull \hbox (15.07765pt too wide) in paragraph at lines 16--17
+\OT1/cmr/m/it/10 colt
+ []
+
+
+Overfull \hbox (8.17773pt too wide) in paragraph at lines 16--17
+\OT1/cmr/m/it/10 di
+ []
+
+
+Overfull \hbox (13.05547pt too wide) in paragraph at lines 16--17
+\OT1/cmr/m/it/10 In-
+ []
+
+
+Overfull \hbox (15.9721pt too wide) in paragraph at lines 16--17
+\OT1/cmr/m/it/10 for-
+ []
+
+
+Overfull \hbox (20.18875pt too wide) in paragraph at lines 16--17
+\OT1/cmr/m/it/10 mat-
+ []
+
+
+Overfull \hbox (15.33322pt too wide) in paragraph at lines 16--17
+\OT1/cmr/m/it/10 ica,
+ []
+
+
+Overfull \hbox (19.69987pt too wide) in paragraph at lines 16--17
+\OT1/cmr/m/it/10 Uni-
+ []
+
+
+Overfull \hbox (16.9943pt too wide) in paragraph at lines 16--17
+\OT1/cmr/m/it/10 ver-
+ []
+
+
+Overfull \hbox (10.4777pt too wide) in paragraph at lines 16--17
+\OT1/cmr/m/it/10 sit
+ []
+
+
+Overfull \hbox (8.17773pt too wide) in paragraph at lines 16--17
+\OT1/cmr/m/it/10 di
+ []
+
+
+Overfull \hbox (31.82759pt too wide) in paragraph at lines 16--17
+\OT1/cmr/m/it/10 Padova 
+ []
+
+
+! LaTeX Error: Lonely \item--perhaps a missing list environment.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.17 \bibitem{8}
+                 L.R. Rabiner, B.H. Juang {\em An Introduction to Hidden Mar...
+
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+! Undefined control sequence.
+<argument> \@listctr 
+                     
+l.17 \bibitem{8}
+                 L.R. Rabiner, B.H. Juang {\em An Introduction to Hidden Mar...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! You can't use `\relax' after \the.
+<recently read> \c@ 
+                    
+l.17 \bibitem{8}
+                 L.R. Rabiner, B.H. Juang {\em An Introduction to Hidden Mar...
+I'm forgetting what you said and using zero instead.
+
+\bibcite{8}{0}
+Missing character: There is no L in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no R in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no R in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no b in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no B in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no H in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no J in font nullfont!
+Missing character: There is no u in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no g in font nullfont!
+Missing character: There is no . in font nullfont!
+
+Overfull \hbox (12.79991pt too wide) in paragraph at lines 17--18
+\OT1/cmr/m/it/10 An
+ []
+
+
+Overfull \hbox (13.05547pt too wide) in paragraph at lines 17--18
+\OT1/cmr/m/it/10 In-
+ []
+
+
+Overfull \hbox (15.71652pt too wide) in paragraph at lines 17--18
+\OT1/cmr/m/it/10 tro-
+ []
+
+
+Overfull \hbox (18.65543pt too wide) in paragraph at lines 17--18
+\OT1/cmr/m/it/10 duc-
+ []
+
+
+Overfull \hbox (17.12212pt too wide) in paragraph at lines 17--18
+\OT1/cmr/m/it/10 tion
+ []
+
+
+Overfull \hbox (8.43327pt too wide) in paragraph at lines 17--18
+\OT1/cmr/m/it/10 to
+ []
+
+
+Overfull \hbox (19.18877pt too wide) in paragraph at lines 17--18
+\OT1/cmr/m/it/10 Hid-
+ []
+
+
+Overfull \hbox (15.33324pt too wide) in paragraph at lines 17--18
+\OT1/cmr/m/it/10 den
+ []
+
+
+Overfull \hbox (32.60533pt too wide) in paragraph at lines 17--18
+\OT1/cmr/m/it/10 Markov
+ []
+
+
+Overfull \hbox (22.2554pt too wide) in paragraph at lines 17--18
+\OT1/cmr/m/it/10 Mod-
+ []
+
+
+Overfull \hbox (11.24437pt too wide) in paragraph at lines 17--18
+\OT1/cmr/m/it/10 els 
+ []
+
+
+! LaTeX Error: Lonely \item--perhaps a missing list environment.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.18 \bibitem{9}
+                 Levinson, Rabiner, Sondhi {\em An Introduction to the Appli...
+
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+! Undefined control sequence.
+<argument> \@listctr 
+                     
+l.18 \bibitem{9}
+                 Levinson, Rabiner, Sondhi {\em An Introduction to the Appli...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! You can't use `\relax' after \the.
+<recently read> \c@ 
+                    
+l.18 \bibitem{9}
+                 Levinson, Rabiner, Sondhi {\em An Introduction to the Appli...
+I'm forgetting what you said and using zero instead.
+
+\bibcite{9}{0}
+Missing character: There is no L in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no v in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no R in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no b in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no S in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no h in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no . in font nullfont!
+
+Overfull \hbox (12.79991pt too wide) in paragraph at lines 18--19
+\OT1/cmr/m/it/10 An
+ []
+
+
+Overfull \hbox (13.05547pt too wide) in paragraph at lines 18--19
+\OT1/cmr/m/it/10 In-
+ []
+
+
+Overfull \hbox (15.71652pt too wide) in paragraph at lines 18--19
+\OT1/cmr/m/it/10 tro-
+ []
+
+
+Overfull \hbox (18.65543pt too wide) in paragraph at lines 18--19
+\OT1/cmr/m/it/10 duc-
+ []
+
+
+Overfull \hbox (17.12212pt too wide) in paragraph at lines 18--19
+\OT1/cmr/m/it/10 tion
+ []
+
+
+Overfull \hbox (8.43327pt too wide) in paragraph at lines 18--19
+\OT1/cmr/m/it/10 to
+ []
+
+
+Overfull \hbox (13.03323pt too wide) in paragraph at lines 18--19
+\OT1/cmr/m/it/10 the
+ []
+
+
+Overfull \hbox (16.12212pt too wide) in paragraph at lines 18--19
+\OT1/cmr/m/it/10 Ap-
+ []
+
+
+Overfull \hbox (14.31102pt too wide) in paragraph at lines 18--19
+\OT1/cmr/m/it/10 pli-
+ []
+
+
+Overfull \hbox (12.77766pt too wide) in paragraph at lines 18--19
+\OT1/cmr/m/it/10 ca-
+ []
+
+
+Overfull \hbox (17.12212pt too wide) in paragraph at lines 18--19
+\OT1/cmr/m/it/10 tion
+ []
+
+
+Overfull \hbox (8.17773pt too wide) in paragraph at lines 18--19
+\OT1/cmr/m/it/10 of
+ []
+
+
+Overfull \hbox (13.03323pt too wide) in paragraph at lines 18--19
+\OT1/cmr/m/it/10 the
+ []
+
+
+Overfull \hbox (20.44429pt too wide) in paragraph at lines 18--19
+\OT1/cmr/m/it/10 The-
+ []
+
+
+Overfull \hbox (14.18323pt too wide) in paragraph at lines 18--19
+\OT1/cmr/m/it/10 ory
+ []
+
+
+Overfull \hbox (8.17773pt too wide) in paragraph at lines 18--19
+\OT1/cmr/m/it/10 of
+ []
+
+
+Overfull \hbox (23.77759pt too wide) in paragraph at lines 18--19
+\OT1/cmr/m/it/10 Prob-
+ []
+
+
+Overfull \hbox (8.68883pt too wide) in paragraph at lines 18--19
+\OT1/cmr/m/it/10 a-
+ []
+
+
+Overfull \hbox (20.95541pt too wide) in paragraph at lines 18--19
+\OT1/cmr/m/it/10 bilis-
+ []
+
+
+Overfull \hbox (10.9888pt too wide) in paragraph at lines 18--19
+\OT1/cmr/m/it/10 tic
+ []
+
+
+Overfull \hbox (24.9276pt too wide) in paragraph at lines 18--19
+\OT1/cmr/m/it/10 Func-
+ []
+
+
+Overfull \hbox (21.21098pt too wide) in paragraph at lines 18--19
+\OT1/cmr/m/it/10 tions
+ []
+
+
+Overfull \hbox (8.17773pt too wide) in paragraph at lines 18--19
+\OT1/cmr/m/it/10 of
+ []
+
+
+Overfull \hbox (5.11108pt too wide) in paragraph at lines 18--19
+\OT1/cmr/m/it/10 a
+ []
+
+
+Overfull \hbox (32.60533pt too wide) in paragraph at lines 18--19
+\OT1/cmr/m/it/10 Markov
+ []
+
+
+Overfull \hbox (19.17763pt too wide) in paragraph at lines 18--19
+\OT1/cmr/m/it/10 Pro-
+ []
+
+
+Overfull \hbox (16.86653pt too wide) in paragraph at lines 18--19
+\OT1/cmr/m/it/10 cess
+ []
+
+
+Overfull \hbox (8.43327pt too wide) in paragraph at lines 18--19
+\OT1/cmr/m/it/10 to
+ []
+
+
+Overfull \hbox (16.1221pt too wide) in paragraph at lines 18--19
+\OT1/cmr/m/it/10 Au-
+ []
+
+
+Overfull \hbox (12.01102pt too wide) in paragraph at lines 18--19
+\OT1/cmr/m/it/10 to-
+ []
+
+
+Overfull \hbox (24.27762pt too wide) in paragraph at lines 18--19
+\OT1/cmr/m/it/10 matic
+ []
+
+
+Overfull \hbox (28.11087pt too wide) in paragraph at lines 18--19
+\OT1/cmr/m/it/10 Speech
+ []
+
+
+Overfull \hbox (27.73862pt too wide) in paragraph at lines 18--19
+\OT1/cmr/m/it/10 Recog-
+ []
+
+
+Overfull \hbox (12.26659pt too wide) in paragraph at lines 18--19
+\OT1/cmr/m/it/10 ni-
+ []
+
+
+Overfull \hbox (17.12212pt too wide) in paragraph at lines 18--19
+\OT1/cmr/m/it/10 tion 
+ []
+
+
+! LaTeX Error: The font size command \normalsize is not defined:
+               there is probably something wrong with the class file.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.19 \bibitem{10}
+                  {\em $http://it.wikipedia.org/wiki/Trasformata_discreta_de...
+
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+[1
+! Undefined control sequence.
+<write> \newlabel{Riferimenti}{{}{\thepage 
+                                           }}
+l.19 \bibitem{10}
+                  {\em $http://it.wikipedia.org/wiki/Trasformata_discreta_de...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+\newlabel{Riferimenti}{{}{}}
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
+
+! LaTeX Error: Lonely \item--perhaps a missing list environment.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.19 \bibitem{10}
+                  {\em $http://it.wikipedia.org/wiki/Trasformata_discreta_de...
+
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+! Undefined control sequence.
+<argument> \@listctr 
+                     
+l.19 \bibitem{10}
+                  {\em $http://it.wikipedia.org/wiki/Trasformata_discreta_de...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! You can't use `\relax' after \the.
+<recently read> \c@ 
+                    
+l.19 \bibitem{10}
+                  {\em $http://it.wikipedia.org/wiki/Trasformata_discreta_de...
+I'm forgetting what you said and using zero instead.
+
+\bibcite{10}{0}
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <7> on input line 19.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <5> on input line 19.
+Missing character: There is no . in font nullfont!
+
+! LaTeX Error: \begin{document} ended by \end{thebibliography}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.20 \end{thebibliography}
+                          
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+Overfull \hbox (23.57056pt too wide) in paragraph at lines 19--21
+\OML/cmm/m/it/10 http \OT1/cmr/m/n/10 :
+ []
+
+
+Overfull \hbox (248.12929pt too wide) in paragraph at lines 19--21
+\OML/cmm/m/it/10 ==it:wikipedia:org=wiki=Trasformata[]iscreta[]el[]oseno$
+ []
+
 )
 ! Emergency stop.
 <*> Riferimenti.tex
@@ -85,11 +1580,11 @@ Overfull \hbox (70.86305pt too wide) in paragraph at lines 7--8
 
  
 Here is how much of TeX's memory you used:
- 10 strings out of 493921
- 273 string characters out of 3144879
- 49031 words of memory out of 3000000
- 3402 multiletter control sequences out of 15000+200000
- 3986 words of font info for 15 fonts, out of 3000000 for 9000
- 841 hyphenation exceptions out of 8191
- 14i,1n,10p,126b,69s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 15 strings out of 495031
+ 262 string characters out of 6181532
+ 50720 words of memory out of 5000000
+ 3319 multiletter control sequences out of 15000+600000
+ 3986 words of font info for 15 fonts, out of 8000000 for 9000
+ 14 hyphenation exceptions out of 8191
+ 21i,4n,16p,206b,130s stack positions out of 5000i,500n,10000p,200000b,80000s
 !  ==> Fatal error occurred, no output PDF file produced!

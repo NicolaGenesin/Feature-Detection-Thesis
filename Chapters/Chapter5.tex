@@ -1,0 +1,175 @@
+\chapter{Verifica e Validazione} % Main chapter title
+
+\label{Capitolo5} % For referencing the chapter elsewhere, use \ref{Chapter1} 
+
+\lhead{Capitolo 5. \emph{Verifica e Validazione}} % This is for the header on each page - perhaps a shortened title
+
+\section{Analisi Statica}
+Al fine di portare avanti il processo di verifica con metodo è stato necessario renderlo
+quantificabile. Perciò si sono definite delle metriche sul codice sorgente. Esse sono
+di seguito definite e il loro significato viene descritto e spiegato. Per ogni metrica si
+sono definiti un range di accettazione e un range ottimale.
+
+\subsection{Complessità ciclomatica}
+
+Tale metrica indica il numero di cammini linearmente indipendenti percorribili durante
+l'esecuzione di un singolo metodo. Tale metrica è molto importante in quanto ha
+implicazioni dirette sulle attività di testing: infatti essa rappresenta un upper bound
+per il numero di routine di test necessarie per raggiungere un completo branch coverage.
+
+\textbf{Range dichiarato:}
+\begin{itemize}
+\item Accettazione $\leq 15$
+\item Ottimale $\leq 10$
+\end{itemize}
+
+\subsection{LOC}
+
+Tale metrica (Lines of Code, linee di codice) indica il numero di linee di codice. Nel conteggio vengono escluse le righe contenenti dichiarazioni di namespaces, tipi, campi, metodi oltre che i metodi astratti e i tipi enumeration.
+Solo il codice effettivamente eseguito è considerato nel conteggio delle righe.
+La metrica LOC non è sempre legata alla produttività del programmatore, ma torna
+utile sia nel calcolo della percentuale di statement coverage e nella valutazione del
+software.
+Essa è indice di manutenibilià (è più semplice manutenere metodi brevi) e quindi
+qualità del codice.
+
+\textbf{Range per metodo:}
+\begin{itemize}
+\item Accettazione $\leq 45$
+\item Ottimale $\leq 15$
+\end{itemize}
+
+\subsection{Numero di campi utilizzati per classe}
+
+Indica il numero di membri di classe (campi dati) di una particolare classe. E'
+importante in quanto è indice delle responsabilità andate ad una classe, se viene
+superato può indicare che la classe ne raggruppa troppe altre e andrebbe ulteriormente
+separata in classi distinte.
+
+\textbf{Range dichiarato:}
+\begin{itemize}
+\item Accettazione $\leq 16$
+\item Ottimale $\leq 8$
+\end{itemize}
+
+\subsection{Numero di metodi utilizzati per classe}
+
+Indica il numero di metodi di una particolare classe. Similmente al numero di campi
+per classe è importante in quanto è indice delle responsabilità andate ad una classe, se
+viene superato può indicare che la classe ha troppe funzionalità e andrebbe separata.
+
+\textbf{Range dichiarato:}
+\begin{itemize}
+\item Accettazione $\leq 16$
+\item Ottimale $\leq 8$
+\end{itemize}
+
+\subsection{LCOM e LCOM HS}
+
+Si vuole definire una metrica a partire da questa definizione: se una classe ha una sola responsabilità si
+dice che essa è coesa. In generale una classe risulterà coesa se i suoi metodi sono
+strettamente legati fra loro. Quando metodi distinti non usano attributi o metodi
+comuni significa che essi non condividono nulla e che quindi potrebbero venir separati.
+La metrica di LCOM misura quindi quanto poco una classe è coesa. Alcune formule per il
+calcolo di LCOM sono le seguenti:
+
+\begin{center}
+\textbf{LCOM} =  $1-(\sum(MF)/M \ast F) $  \\
+\textbf{LCOM HS} = $(M-(\sum(MF)/F))\ast(M-1)$
+\end{center}
+
+Dove:
+\begin{itemize}
+\item M è il numero di metodi nella classe. Si considerano sia i metodi statici sia quelli di istanza, ed include inoltre i costruttori,getters e setters ed eventuali metodi del tipo add/remove
+\item F è il numero di campi dati d'istanza all'interno della classe 
+\item MF è il numero di metodi della classe che accedono un particolare campo dati di tipo classe
+\item $\sum(MF)$ è la somma degli MF tra tutti i campi d'istanza della classe
+\end{itemize}
+
+L'idea alla base di tali formule è che una classe perfettamente coesa utilizza tutti i
+suoi campi dati di tipo classe all'interno di ogni suo metodo il che comporta :
+
+\begin{center}
+ $(\sum(MF) = M \ast F) \Leftrightarrow LCOM = 0 $
+\end{center}
+
+La differenza tra LCOM e la sua versione HS (Hendersons-Sellers) è che la prima
+ritorna dei valori nel range [0-1] mentre la seconda nel range [1-2]. La versione HS è
+considerata più efficace per la rilevazione dei tipi scarsamente coesi.
+Tale metrica è interessante, ma va trattata con cautela (basti pensare una classe
+che ha n campi dati, n getters e n setters, essa risulterà scarsamente coesa, il che
+non rispecchia la realtà). Infatti essa non va valutata singolarmente, ma deve essere
+inserita in un contesto di valutazione che comprende altre variabili, soprattutto il
+numero di campi e il numero di metodi. 
+
+\textbf{Range dichiarato:}
+\begin{itemize}
+\item Accettazione $\leq 0.8$
+\item Ottimale = 0
+\end{itemize}
+
+\newpage
+\section{Analisi Dinamica}
+
+Nello sviluppo dell'applicazione si sono progettati dei test che precedessero l'implementazione di ogni componente e di ogni classe. I test di integrazione hanno definito come i vari
+componenti avrebbero dovuto relazionarsi tra di loro, e per ogni componente sono stati definiti adeguati test di unità che andassero a verificare il corretto funzionamento delle classi interne. Ogni unità e stata testata in
+relazione al ruolo che essa avrebbe avuto all'interno del sistema in base al suo "peso".
+I test d'unità verificano in gran parte l'integrità degli input inseriti dall'utente e di come questi variano durante l'utilizzo dell'applicativo.
+
+Per l'analisi delle chiamate ai metodi forniti dalle librerie esterne (OpenCV e Facebook SDK) si è cercato di
+verificare la correttezza nei limiti di risorse e tempo disponibili. Infatti alcune funzioni fornite da tali librerie sono ad alto livello e comprendono un grafo di chiamate molto esteso
+(in particolare chiamate a metodi di OpenCV, come il rilevamento facciale, e a Facebook per quanto riguarda il login e il mantenimento della sessione attiva), e non è stato possibile progettare test in quanto tali operazioni sono
+particolarmente complesse e avrebbero richiesto una profonda comprensione della meccanica di tali librerie.
+
+Il tool utilizzato per eseguire i test è stato Android JUnit che fornisce delle classi previste di metodi adibiti alla creazione dei cosiddetti oggetti mock (oggetti simili a quelli reali ma che hanno l'obiettivo di simulare l'oggetto reale in maniera controllata) e metodi che possano aiutare ad aiutare il ciclo di vita di un componente.
+
+\section{Test di Validazione}
+
+Vengono riportati in questa sezione i test che descrivono la strategia utilizzata per la
+validazione del prodotto. Si è cercato di tenere un rapporto di 1:1 tra i
+requisiti funzionali e i test di validazione che verificavano quella specifica funzionalità.
+Per ogni test viene riportato il suo codice gerarchico identificativo. Se tale test risulta sufficientemente grande, esso viene scomposto in sotto-test aventi come indice gerarchico l'indice del padre.
+
+\begin{itemize}
+\item \textbf{T1} Il test è atto a verificare il buon funzionamento dell'attività di riconoscimento facciale e delle rispettive parti
+\begin{itemize}
+\item \textbf{T1.1} Il test verifica il corretto caricamento delle librerie e le adatta in base all'hardware caratterizzante dispositivo
+\item \textbf{T1.2} Il test verifica la possibilità di eseguire la calibrazione con le
+impostazioni selezionate
+\begin{itemize}
+\item \textbf{T1.2.1} Il test verifica la possibilità di cambiare camera a run-time
+\item \textbf{T1.2.2} Il test verifica la possibilità di cambiare il tipo di elaboratore della camera
+\item \textbf{T1.2.3} Il test verifica la possibilità di cambiare la risoluzione del frame in ingresso
+\item \textbf{T1.2.4} Il test verifica la possibilità di cambiare il range operativo di campionamento
+\item \textbf{T1.2.5} Il test verifica la possibilità di cambiare i parametri operativi di campionamento
+\item \textbf{T1.2.6} Il test verifica il corretto funzionamento di modifica delle parti da ricercare a run-time
+\item \textbf{T1.2.7} Il test verifica la possibilità di abilitare o disabilitare la modalità alto contrasto e/o monocromatica
+\end{itemize}
+
+
+\item \textbf{T1.4} Il test verifica la possibilità di cambiare lo Sprite corrente
+\begin{itemize}
+\item \textbf{T1.4.1} Il test deve verificare il corretto caricamento degli Sprites
+\item \textbf{T1.4.2} Il test deve verificare la corretta renderizzazione della ListView
+\item \textbf{T1.4.3} Il test verifica verifica il corretto utilizzo dello Sprite assegnato
+\end{itemize}
+\end{itemize}
+\item \textbf{T2.1} Il test verifica il corretto caricamento di un'immagine dallo smartphone
+\item \textbf{T3} Il test verifica la possibilità di condividere la foto
+\begin{itemize}
+\item \textbf{T3.1} Il test verifica la possibilità di ridimensionare la foto scattata
+\item \textbf{T3.2} Il test verifica la possibilità di condividere la foto inoltrandola verso applicazioni di messaggistica preinstallate nello smartphone
+\begin{itemize}
+\item \textbf{T3.2.1} Il test verifica il caricamento della lista di applicazioni attraverso le quali è possibile condividere il contenuto
+\item \textbf{T3.2.2} Il test verifica l'esito della condivisione
+\end{itemize}
+\item \textbf{T3.3} Il test verifica la possibilità di eseguire la connessione verso la piattaforma Facebook
+\begin{itemize}
+\item \textbf{T3.3.1} Il test verifica la possibilità di eseguire il Login sulla piattaforma Facebook
+\item \textbf{T3.3.2} Il test verifica il mantenimento della sessione successivo alla chiusura dell'applicazione
+\item \textbf{T3.3.3} Il test verifica l'integrità dei dati allegati alla foto, inseriti dall'utente
+\item \textbf{T3.3.4} Il test verifica l'esito della condivisione
+\end{itemize}
+\end{itemize}
+\end{itemize}
+

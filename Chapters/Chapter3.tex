@@ -1,8 +1,8 @@
 % Chapter 1
 
-\chapter{Attività di Stage} % Main chapter title
+1.1\chapter{Pianificazione ed Analisi} % Main chapter title
 
-\label{Chapter3} % For referencing the chapter elsewhere, use \ref{Chapter1} 
+\label{Capitolo 3} % For referencing the chapter elsewhere, use \ref{Chapter1} 
 
 \lhead{Capitolo 3. \emph{Attività di stage}} % This is for the header on each page - perhaps a shortened title
 
@@ -13,9 +13,13 @@
 Viene di seguito riportato un diagramma di Gantt riassuntivo della pianificazione
 del lavoro nel periodo di stage. Come si può vedere le ore sono state suddivise secondo
 2 obiettivi, che rappresentano parti di sistema indipendenti che verranno sviluppate
-in maniera autonoma.
+in maniera autonoma.\\
 
-GRAFICO
+\begin{figure}[h]\centering  
+\includegraphics[scale=0.37]{/home/nicgen/Scrivania/thesis/Figures/tempo.png}
+\caption[Pianificazione temporale]{Pianificazione temporale definita}
+\label{pic-a}
+\end{figure}
 
 Il modello di ciclo di vita prescelto può essere paragonabile allo scrum: viene infatti preferito rispetto alla rigidità dei modelli più classici, in
 quanto permetteva lo sviluppo continuo dei vari incrementi e la possibilità di mostrare
@@ -23,63 +27,349 @@ passo per passo i risultati ottenuti. Per chiarezza si riporta una breve descriz
 obiettivi presenti nel piano di lavoro che verranno maggiormente approfonditi nelle
 sezioni successive:
 
-\textbf{Obiettivo 1}: Creazione di una libreria che permetta il riconoscimento facciale\\
-\textbf{Obiettivo 2}: Creazione di una libreria che permetta una facile condivisione dei contenuti multimediali eventualmente creati verso i social network
+\textbf{Obiettivo 1}: Studiare la fattibilità prestazionale di un software di rivelamento facciale e delle sue parti su un dispositivo mobile.
+
+\textbf{Obiettivo 2}: Creazione di una libreria di appoggio ad OpenCV che renda di facile utilizzo il rilevamento facciale e delle parti presenti.
+
+\textbf{Obiettivo 3}: Creazione di una libreria che permetta una facile condivisione dei contenuti multimediali eventualmente creati verso il social network Facebook.
 
 
 %----------------------------------------------------------------------------------------
 
 \section{Analisi}
 
-In seguito allo studio del dominio applicativo effettuato durante le prime ? settimane di stage e alle spiegazioni del tutor aziendale sono stati individuati i requisiti del prototipo richiesto.
+In seguito allo studio del dominio applicativo effettuato durante le prime settimane di stage e alle spiegazioni del tutor aziendale sono stati individuati i requisiti del prototipo richiesto.
 Dal momento che si tratta di un prototipo che dovrà essere alla base di una famiglia di prodotti, esso non sarà indipendente dall input umano ma dovrà garantire la flessibilità ed espandibilità necessaria.
 
 Di seguito vengono riportati i casi d'uso principali individuati.
 
 \subsection{Casi d'uso}
 
-Il caso d'uso è un tecnica usata nei processi di ingegneria del software per effettuare in maniera esaustiva e non ambigua, la raccolta dei requisiti funzionali al fine di produrre software di qualità.
-Essa consiste nel valutare ogni requisito focalizzandosi sugli attori che interagiscono col sistema, valutandone le varie interazioni. Nel caso specifico, l'attore
-principale è uno solo, ossia l'utente che utilizza il dispositivo mobile.
+In questa sezione verranno elencati i casi d'uso del sistema che `e oggetto dello stage.
+Dato che l'applicazione è stata pensata per rispondere solo alle azioni di un utente l'unico attore che prenderemo in
+considerazione è l'utente utilizzatore. Per ogni caso d'uso verranno riportate:
 
-\textbf{UC1 Caso d'uso generale}
-\\
-\textbf{Precondizione:}
-\\
-\textbf{Postcondizione:}
-\\
-\textbf{Scenario principale:}
-\\
-GRAFICO UML
-\\
+\begin{itemize}
+\item  \textit{Descrizione}: contenuto del caso d'uso
+\item  \textit{Flusso principale degli eventi}
+\item  \textit{Precondizioni}: asserzioni che sono valide prima dell'effettiva esecuzione del
+caso d'uso
+\item  \textit{Postcondizione}: asserzioni che sono valide dopo l'esecuzione del caso d'uso
+\item  \textit{Postcondizione alternativa}: eventuali scenari alternativi che differiscono dal normale flusso del caso d'uso
+\end{itemize}
+Ogni caso d'uso ha un identificativo stile UCx dove x indica una posizione gerarchica.
+Ogni caso d'uso è posizionato all'interno della gerarchia che parte dal caso d'uso più generale UC1 (radice dell'albero). Per ogni caso d'uso figlio valgono ovviamente le precondizioni del padre. Per chiarezza si definiscono gli acronimi per i termini RealTime (RT) e Static (S) per definire la duplice funzione dell'applicazione.
 
+\subsubsection{UC1: Principale (RT)}
 
-\textbf{UC2 Caso d'uso generale}
-\\
-\textbf{Precondizione:}
-\\
-\textbf{Postcondizione:}
-\\
-\textbf{Scenario principale:}
-\\
-GRAFICO UML
-\\
+\textbf{\textit{Descrizione:}} L'utente ha avviato il programma, che risulta quindi pronto a rispondere agli eventuali input utente. L'utente può decidere lo Sprite da utilizzare.
 
+\textbf{\textit{Flusso principale degli eventi:}} 
 
-\textbf{UCx Caso d'uso generale}
-\\
-\textbf{Precondizione:}
-\\
-\textbf{Postcondizione:}
-\\
-\textbf{Scenario principale:}
-\\
-GRAFICO UML
-\\
+\begin{itemize}
+\item L'utente può avviare il rilevamento del volto di parti facciali predefinite (UC1.1)
+\item L'utente può calibrare la Camera (UC1.2)
+\item L'utente può attivare la funzione di rilevamento di orientamento del volto (UC1.3)
+\item L'utente può scegliere lo Sprite da utilizzare da una lista a schermo (UC1.4)
+\end{itemize}
 
-\subsection{Requisiti}
+\textbf{\textit{Precondizione:}} L'applicazione è avviata e funzionante.
 
 
+\begin{figure}[H]\centering  
+\includegraphics[scale=0.6]{/home/nicgen/Scrivania/thesis/Figures/uc1.png}
+\caption[UC1 - Sistema]{UC1 - Sistema}
+\label{pic-a}
+\end{figure}
+
+
+\subsubsection{UC2: Principale (S)}
+
+\textbf{\textit{Descrizione:}} L'utente ha avviato il programma, che risulta quindi pronto a rispondere agli eventuali input utente. L'utente può decidere lo Sprite da utilizzare.
+
+\textbf{\textit{Flusso principale degli eventi:}} 
+
+\begin{itemize}
+\item L'utente carica una foto dal dispositivo verso l'applicazione (UC2.1)
+\item L'utente richiede la funzione di rilevamento del volto (UC2.2)
+\item L'utente può scegliere lo Sprite da utilizzare da una lista a schermo (condiviso con UC2.3)
+\end{itemize}
+
+\textbf{\textit{Precondizione:}} L'applicazione è avviata e funzionante.
+
+\begin{figure}[H]\centering  
+\includegraphics[scale=0.6]{/home/nicgen/Scrivania/thesis/Figures/uc2.png}
+\caption[UC2 - Sistema]{UC2 - Sistema}
+\label{pic-a}
+\end{figure}
+
+
+\subsubsection{UC3: Secondario}
+
+\textbf{\textit{Descrizione:}} L'utente ha avviato il programma, ha scattato una foto in modalità dinamica o statica.
+
+\textbf{\textit{Flusso principale degli eventi:}} 
+
+\begin{itemize}
+\item L'utente può ridimensionare la foto ottenuta in base a formati predefiniti (UC3.1)
+\item L'utente può condividere la foto ottenuta verso applicazioni di messaggistica interne grazie al lancio di un Intent (UC3.2)
+\item L'utente può effettuare il Login sulla piattaforma Facebook e condividere la foto su quest ultimo (UC3.3)
+\end{itemize}
+
+\textbf{\textit{Precondizione:}} L'applicazione è avviata e funzionante.
+
+\begin{figure}[H]\centering  
+\includegraphics[scale=0.6]{/home/nicgen/Scrivania/thesis/Figures/uc3.png}
+\caption[UC3 - Sistema]{UC3 - Sistema}
+\label{pic-a}
+\end{figure}
+
+
+\subsubsection{UC1.1: (RT)::Rilevamento}
+
+\textbf{\textit{Descrizione:}} L'utente può avviare il rilevamento del volto di parti facciali predefinite. L'applicazione reagisce con la creazione di templates che verranno successivamente riutilizzati per il tentativo di match sui frames successivi.
+
+
+\textbf{\textit{Precondizione:}} L'applicazione è avviata e funzionante.
+\textbf{\textit{Postcondizione:}} L'applicazione rileva gli eventuali volti presenti e le feature indicate.
+
+
+
+\subsubsection{UC1.2: (RT)::Calibrazione Camera}
+
+\textbf{\textit{Descrizione:}} 
+
+\textbf{\textit{Flusso principale degli eventi:}} 
+
+\begin{itemize}
+\item L'utente può selezionare una camera (UC1.2.1)
+\item L'utente può selezionare il tipo di elaborazione della camera (UC1.2.2)
+\item L'utente può modificare la risoluzione del frame in ingresso (UC1.2.3)
+\item L'utente può modificare la profondità di campionamento (distanza minima e massima su cui effettuare lo scan) (UC1.2.4)
+\item L'utente può modificare il numero minimo di campionamenti sotto il quale il volto non viene riconosciuto come valido (UC1.2.5)
+\item L'utente può abilitare/disabilitare lo scan delle parti facciali in tempo reale (UC1.2.6)
+\item L'utente può abilitare/disabilitare la modalità alto contrasto e/o monocromatica (UC1.2.7)
+\end{itemize}
+
+\textbf{\textit{Precondizione:}} L'applicazione è avviata e funzionante. Inoltre l'utente ha espresso la volontà di utilizzare tale funzione attraverso la pressione di un bottone presente all'interno dell'interfaccia grafica.
+
+\begin{figure}[H]\centering  
+\includegraphics[scale=0.6]{/home/nicgen/Scrivania/thesis/Figures/uc12.png}
+\caption[UC1.2 - Calibrazione camera]{UC1.2 - Calibrazione camera}
+\end{figure}
+
+\subsubsection{UC1.3: (RT)::Orientamento Volto}
+
+\textbf{\textit{Descrizione:}} L'utente deve poter avviare la funzionalità che permette la triangolazione delle parti occhi-bocca per capire l'orientamento del volto in base alle fattezze dei triangolo individuato
+
+\textbf{\textit{Postcondizione:}} L'applicazione rileverà in tempo reale l'orientamento del volto della persona rispetto alla camera grazie alla triangolazione delle parti occhi-bocca.
+
+
+\subsubsection{UC1.4: (RT)::Selezione Sprite}
+
+\textbf{\textit{Descrizione:}} L'utente può decidere quale tra i possibili Sprites utilizzare, da sovrapporre al volto individuato.
+
+\textbf{\textit{Flusso principale degli eventi:}} 
+
+\begin{itemize}
+\item Caricamento all'interno di una ListView della lista di oggetti di tipo Sprite (UC1.4.1)
+\item Selezione dello Sprite desiderato (UC1.4.2)
+\item Effettiva renderizzazione dello Sprite che sarà posto in overlay su ogni fotogramma (UC1.4.3)
+\end{itemize}
+
+\textbf{\textit{Precondizione:}} L'applicazione è avviata e funzionante. Inoltre l'utente ha espresso la volontà di utilizzare tale funzione attraverso la pressione di un bottone presente all'interno dell'interfaccia grafica.
+
+\begin{figure}[H]\centering  
+\includegraphics[scale=0.6]{/home/nicgen/Scrivania/thesis/Figures/uc14.png}
+\caption[UC1.4 - Selezione Sprite]{UC3.3 - Selezione Sprite}
+\label{pic-a}
+\end{figure}
+
+\subsubsection{UC2.1: (S)::Caricamento Foto}
+
+\textbf{\textit{Descrizione:}} L'utente sceglie attraverso l'utilizzo di una galleria proprietaria di Android la foto da caricare.
+
+\textbf{\textit{Postcondizione:}} L'applicazione carica al suo interno una foto proveniente dallo storage dello smartphone e la tiene in memoria.
+
+
+\subsubsection{UC2.2: (S)::Rilevamento}
+
+\textbf{\textit{Descrizione:}} L'utente può avviare il rilevamento del volto di parti facciali predefinite. L'applicazione reagisce con la creazione di un template del volto rilevato.
+
+
+\textbf{\textit{Precondizione:}} L'applicazione è avviata e funzionante.
+\textbf{\textit{Postcondizione:}} L'applicazione rileva gli eventuali volti presenti e le feature indicate.
+
+\subsubsection{UC2.3: (S)::Selezione Sprite}
+
+\textbf{\textit{Descrizione:}} L'utente può decidere quale tra i possibili Sprites utilizzare, da sovrapporre al volto individuato.
+
+\textbf{\textit{Flusso principale degli eventi:}} 
+
+\begin{itemize}
+\item Caricamento all'interno di una ListView della lista di oggetti di tipo Sprite (UC1.4.1)
+\item Selezione dello Sprite desiderato (UC1.4.2)
+\item Effettiva renderizzazione dello Sprite che sarà posto in overlay su ogni fotogramma (UC1.4.3)
+\end{itemize}
+
+\textbf{\textit{Precondizione:}} L'applicazione è avviata e funzionante.
+
+\subsubsection{UC3.1: Secondario::Ridimensionamento frame}
+
+\textbf{\textit{Descrizione:}} L'utente può ridimensionare la foto ottenuta scegliendo tra formati predefiniti.
+
+\textbf{\textit{Postcondizione:}} L'applicazione ridimensiona l'immagine in base alla dimensione definita dall'utente.
+
+
+\subsubsection{UC3.2: Secondario::Condivisione Interna}
+
+\textbf{\textit{Descrizione:}} L'utente può condividere la foto ottenuta verso applicazioni di messaggistica
+
+\textbf{\textit{Flusso principale degli eventi:}} 
+
+\begin{itemize}
+\item L'utente deve poter esprimere il suo intento cliccando su un tasto presente all'interno dell'interfaccia grafica (UC3.2.1)
+\item L'applicazione deve esporre i mezzi attraverso i quali il contenuto multimediale può essere condiviso (UC3.2.2)
+\item L'applicazione condivide il contenuto multimediale in seguito alla selezione dell'utente (UC3.2.3)
+\end{itemize}
+
+\textbf{\textit{Precondizione:}} L'applicazione è avviata e funzionante.
+
+
+\begin{figure}[H]\centering  
+\includegraphics[scale=0.6]{/home/nicgen/Scrivania/thesis/Figures/uc32.png}
+\caption[UC3.2 - Condivisione Interna]{UC3.2 - Condivisione Interna}
+\label{pic-a}
+\end{figure}
+
+\subsubsection{UC3.3: Secondario::Facebook}
+
+\textbf{\textit{Descrizione:}} L'utente ha avviato il programma, ha scattato una foto in modalità dinamica o statica.
+
+\textbf{\textit{Flusso principale degli eventi:}} 
+
+\begin{itemize}
+\item L'utente può effettuare il login su facebook. (UC3.3.1)
+\item L'utente può inserire un messaggio da allegare alla foto. (UC3.3.2)
+\item L'utente può condividere tale contenuto sulla propria "bacheca" o su quella di altri conoscenti. (UC3.3.3)
+\end{itemize}
+
+\textbf{\textit{Postcondizione alternativa:}} L'applicazione è avviata e funzionante.
+
+
+\begin{figure}[H]\centering  
+\includegraphics[scale=0.6]{/home/nicgen/Scrivania/thesis/Figures/uc33.png}
+\caption[UC3.3 - Condivisione Facebook]{UC3.3 - Condivisione Facebook}
+\label{pic-a}
+\end{figure}
+
+\subsubsection{UC1.2.1: (RT)::Calibrazione Camera::Selezione Camera}
+
+\textbf{\textit{Descrizione:}} L'utente ha la possibilità di selezionare tra le camere presenti all'interno del dispositivo,se disponibili. 
+
+\textbf{\textit{Postcondizione:}} L'applicazione ha accesso all'utilizzo della camera.
+
+\textbf{\textit{Postcondizione alternativa:}} L'applicazione non ha accesso all'utilizzo della camera.
+
+\subsubsection{UC1.2.2: (RT)::Calibrazione Camera::Elaborazione Camera}
+
+\textbf{\textit{Descrizione:}} L'utente ha la possibilità di selezionare che tipo di camera utilizzare (Nativa OpenCV o Android) 
+
+\textbf{\textit{Postcondizione:}} L'applicazione utilizzerà da quel momento il tipo di camera input selezionato
+
+\subsubsection{UC1.2.3: (RT)::Calibrazione Camera::Risoluzione Camera}
+
+\textbf{\textit{Descrizione:}} L'utente ha la possibilità di selezionare la risoluzione alla quale scalare il frame in ingresso.
+
+\textbf{\textit{Postcondizione:}} L'applicazione scalerà ogni frame in ingresso alla risoluzione indicata dall'utente, mantenendo l'aspect ratio.
+
+\subsubsection{UC1.2.4: (RT)::Calibrazione Camera::Profondità Camera}
+
+\textbf{\textit{Descrizione:}}  L'utente ha la possibilità di selezionare la dimensione minima e massima (range operativo) secondo le quali il campionamento va effettuato.
+
+\textbf{\textit{Postcondizione:}} L'applicazione effettuerà il campionamento nel range definito.
+
+\subsubsection{UC1.2.5: (RT)::Calibrazione Camera::Campionamenti Camera}
+
+\textbf{\textit{Descrizione:}} L'utente ha la possibilità di selezionare il numero di campionamenti al di sotto del quale il volto rilevato viene valutato come non valido e quindi scartato.
+
+\textbf{\textit{Postcondizione:}} L'applicazione effettua lo scan del frame basandosi sul numero di campionamenti settato dall'utente, al di sotto del quale il volto rilevato viene valutato come non valido e quindi scartato. 
+
+\subsubsection{UC1.2.6: (RT)::Calibrazione Camera::Parti Facciali}
+
+\textbf{\textit{Descrizione:}} L'utente ha la possibilità di selezionare quali parti facciali abilitare.
+
+\textbf{\textit{Postcondizione:}} L'applicazione eseguirà la ricerca di tutte le parti impostate dall'utente.
+
+\subsubsection{UC1.2.7: (RT)::Calibrazione Camera::Modalità Camera}
+
+\textbf{\textit{Descrizione:}} L'utente ha la possibilità di decidere se il frame in ingresso deve essere riconvertito in un immagine monocromatica e/o se esso debba subire un'elaborazione atta ad elevarne il contrasto.
+
+\textbf{\textit{Postcondizione:}} L'applicazione applicherà la modalità definita.
+
+\subsubsection{UC1.4.1: (RT)::Selezione Sprite::Caricamento Sprites}
+
+\textbf{\textit{Descrizione:}} L'applicazione deve permettere su richiesta il caricamento su una ListView della lista di oggetti di tipo Sprite.
+
+\textbf{\textit{Postcondizione:}} L'applicazione popola, attraverso l'utilizzo di un adapter, la ListView presente all'interno dell'interfaccia grafica.
+
+\subsubsection{UC1.4.2: (RT)::Selezione Sprite::Selezione Sprites}
+
+\textbf{\textit{Descrizione:}} L'applicazione deve permettere la selezione dello Sprite desiderato.
+
+\textbf{\textit{Postcondizione:}} L'applicazione terrà in memoria lo Sprite selezionato, pronto per l'effettivo render.
+
+\subsubsection{UC1.4.3: (RT)::Selezione Sprite::Visione Sprites}
+
+\textbf{\textit{Descrizione:}} L'applicazione deve permettere l'effettiva renderizzazione dello Sprite che sarà posto in overlay su ogni fotogramma.
+
+\textbf{\textit{Postcondizione:}} L'applicazione renderizza lo sprite in overlay, su ogni fotogramma, in corrispondenza del volto rilevato.
+
+\subsubsection{UC3.2.1: Secondario::Condivisione Interna::Intent }
+
+\textbf{\textit{Descrizione:}} L'utente deve poter esprimere il suo intento cliccando su un tasto presente all'interno dell'interfaccia grafica.
+
+\textbf{\textit{Postcondizione:}} L'applicazione prepara l'adapter per il caricamento delle applicazioni di condivisione e popola la ListView.
+
+\subsubsection{UC3.2.2: Secondario::Condivisione Interna::Selezione}
+
+\textbf{\textit{Descrizione:}} L'applicazione deve esporre i mezzi attraverso i quali il contenuto multimediale può essere condiviso.
+
+\textbf{\textit{Postcondizione:}} L'applicazione rende visibile a schermo gli le applicazioni disponibili.
+
+\subsubsection{UC3.2.3: Secondario::Condivisione Interna::Condivisione}
+
+\textbf{\textit{Descrizione:}} L'applicazione deve rispondere alla scelta dell'utente di utilizzare quella particolare applicazione per la condivisione del contenuto multimediale.
+
+\textbf{\textit{Postcondizione:}} L'applicazione condivide il contenuto multimediale in seguito alla selezione dell'utente.
+
+\subsubsection{UC3.3.1: Secondario::Facebook::Login}
+
+\textbf{\textit{Descrizione:}} L'utente può inoltrare la richiesta di accesso alla piattaforma Facebook attraverso l'uso di un bottone presente all'interno dell'interfaccia grafica.
+
+\textbf{\textit{Postcondizione:}} L'utente ha accesso alla piattaforma con i dovuti permessi. La classe si impegna di mantenere in memoria la sessione attiva 
+
+\textbf{\textit{Postcondizione alternativa:}} L'utente non ha accesso alla piattaforma e viene invitato a controllare i dati di accesso.
+
+\subsubsection{UC3.3.2: Secondario::Facebook::Messaggio}
+
+\textbf{\textit{Descrizione:}} L'utente può scegliere se aggiungere un messaggio testuale alla foto .
+
+\textbf{\textit{Postcondizione:}} L'utente ha inserito un messaggio testuale che sarà preso in consegna al momento dell'eventuale invio dei contenuti.
+
+\textbf{\textit{Postcondizione alternativa:}} L'utente non ha inserito un messaggio testuale.
+
+\subsubsection{UC3.3.3: Secondario::Facebook::Condivisione}
+
+\textbf{\textit{Descrizione:}} L'utente può scegliere se la destinazione della foto sarà la propria "bacheca" o quella di altri conoscenti.
+
+\textbf{\textit{Postcondizione:}} L'utente carica con successo il contenuto.
+
+\textbf{\textit{Postcondizione alternativa:}} Il contenuto non viene caricato per problemi di connessione verso la piattaforma.
+
+
+
+\subsection{Associazione Requisiti-Casi d'uso}
 
 La classificazione dei requisiti sarà seguirà il formalismo:
 \begin{center}
@@ -105,304 +395,41 @@ Nello specifico:
 A seguire i requisiti individuati:
 
 \begin{center}
-    \begin{tabular}{ | p{3cm} | l | p{3cm} |}
+    \begin{longtable}{ | p{2cm} | p{7cm} | p{2cm} |}
     \hline
     Requisiti & Descrizione & Caso d'uso \\ \hline
-    test & test & test  \\ \hline 
-    test & test & test \\ \hline
-    test & test & test  \\ \hline 
-    test & test & test \\ \hline
-    test & test & test  \\ \hline 
-    test & test & test \\ \hline
-    test & test & test  \\ \hline 
-    test & test & test \\ \hline
-    \end{tabular}
+    RFO1 &  L'applicazione deve permettere il rilevamento facciale in tempo reale su dispositivi mobili Android & UC1  \\ \hline 
+    RFO1.1 &  L'utente può avviare il rilevamento del volto di parti facciali predefinite. L'applicazione reagisce con la creazione di templates che verranno successivamente riutilizzati per il tentativo di match sui frames successivi  & UC1.1 \\ \hline
+    RFO1.2 &  L'applicazione deve permettere di calibrare la camera corrente  & UC1.2  \\ \hline 
+    RFO1.2.1 &  L'applicazione deve permettere all'utente di selezionare la camera desiderata & UC1.2.1  \\ \hline
+    RFO1.2.2 &  L'applicazione deve permettere all'utente di modificare il tipo di elaborazione della camera & UC1.2.2  \\ \hline
+    RFO1.2.3 &  L'applicazione deve permettere all'utente di modificare la risoluzione del frame in ingresso & UC1.2.3  \\ \hline
+    RFO1.2.4 &  L'applicazione deve permettere all'utente di modificare la profondità di campionamento (distanza minima e massima su cui effettuare lo scan) & UC1.2.4  \\ \hline
+    RFO1.2.5 &  L'applicazione deve permettere all'utente di modificare il numero minimo di campionamenti sotto il quale il volto non viene riconosciuto come valido  & UC1.2.5  \\ \hline
+    RFO1.2.6 &  L'applicazione deve permettere all'utente di abilitare di abilitare/disabilitare la ricerca delle parti in tempo reale  & UC1.2.6  \\ \hline
+    RFO1.2.7 &  L'applicazione deve permettere all'utente di abilitare/disabilitare la modalità contrasto e/o monocromatica  & UC1.2.7  \\ \hline
+    RFD1.3 &  L'applicazione deve permettere di cogliere l'orientamento dell'eventuale volto individuato & UC1.3 \\ \hline    
+    RFD1.4 &  L'applicazione deve permettere di scegliere lo Sprite da utilizzare & UC1.4 \\ \hline
+    RFO1.4.1 &  L'applicazione deve caricare una lista di Sprites, che saranno successivamente selezionabili dall'utente & UC1.4.1  \\ \hline
+    RFO1.4.2 &  L'applicazione deve permettere all'utente di selezionare uno o più Sprites desiderati da una ListView presente all'interno dell'interfaccia grafica  & UC1.4.2  \\ \hline
+    RFO1.4.3 &  L'applicazione deve poter renderizzare gli Sprites precedentemente selezionati & UC1.4.3  \\ \hline    
+    RFO2 &  L'applicazione deve permettere di rilevare volti a partire da un immagine statica su dispositivi mobili Android & UC2  \\ \hline
+    RFO2.1 &  L'applicazione deve permettere all'utente di caricare una foto dal proprio smartphone & UC2.1  \\ \hline 
+    RFO2.2 &  L'applicazione deve permettere di avviare il rilevamento facciale & UC2.2 \\ \hline
+    RFD2.3 &   L'applicazione deve permettere di scegliere uno o più Sprites da utilizzare  & UC2.3  \\ \hline 
+    RFO3 &  L'applicazione deve permettere la condivisione di contenuti multimediali & UC3 \\ \hline
+    RFD3.1 &  L'applicazione deve permettere di ridimensionare la foto scattata in base a formati predefiniti & UC3.1 \\ \hline
+    RFD3.2 &  L'applicazione deve permettere di condividere la foto ottenuta verso applicazioni di messaggistica interne  & UC3.2 \\ \hline
+    RFD3.2.1 &  L'applicazione deve fornire l'utente di un bottone attraverso il quale può esprimere il suo intento di condividere il contenuto  & UC3.2.1 \\ \hline
+    RFD3.2.2 &  L'applicazione deve rispondere fornendo graficamente una risposta contenente i servizi di inoltro disponibili  & UC3.2.2 \\ \hline
+    RFD3.2.3 &  L'applicazione deve condividere il contenuto multimediale attraverso il servizio selezionato  & UC3.2.3 \\ \hline    
+    RFD3.3 &  L'applicazione deve permettere il login facebook e condividere la foto su quest ultimo  & UC3.3 \\ \hline
+    RFD3.3.1 &  L'applicazione deve permettere l'inoltro di una richiesta di accesso verso i server Facebook ed il mantenimento della sessione attiva & UC3.3.1 \\ \hline
+    RFD3.3.2 &  L'applicazione deve permettere l'inserimento di un testo da allegare alla foto & UC3.3.2 \\ \hline
+    RFD3.3.3 &  L'applicazione deve permettere il caricamento della foto sulla piattaforma Facebook & UC3.3.3 \\ \hline
+    RFD4 &  L'applicazione deve mantenere un framerate minimo di 15 fotogrammi al secondo & non mappabile \\ \hline
+    \end{longtable}
+    
+    \textbf{Appunto RFD4}: Un sistema è scalabile se può essere adattato a diversi contesti con forti differenze di complessità senza che questo richieda la riprogettazione dello stesso sistema. Si richiede che le prestazioni di un sistema possano essere aumentate "semplicemente" fornendo al sistema stesso maggiori risorse di calcolo. Nello specifico si richiede che il sistema mantenga il framerate minimo indicato per gli smartphone Android aventi sistema operativo uguale o successivo ad \textit{HoneyComb}.
 \end{center}
-
-\subsubsection{Modello di ciclo di vita}
-%----------------------------------------------------------------------------------------
-
-\section{Progettazione}
-
-\subsection{Architettura}
-\subsection{Tecnologie utilizzate}
-
-\subsubsection{Java}
-
-Il linguaggio per applicazioni Android è in realtà un "dialetto" del linguaggio Java così come è diversa anche la virtual machine di runtime (Dalvik virtual machine anziché JVM).
-In una normale applicazione Android non c'è un entry point (il classico metodo "main") da dove normalmente un programma comincia a caricare le sue parti software e avviarsi: tutto è pensato per essere un "componente" pilotato dagli eventi ("Event Driven") dell'hardware o di altri componenti. Questo paradigma fa sì che il programmatore sviluppi per ogni hardware delle routine il più possibile indipendenti. Un vantaggio è che il sistema operativo potrà ottimizzare le risorse, ad esempio rinunciando a caricare componenti (e hardware) non supportati o non prioritari perché inutilizzati.
-
-
-\subsubsection{Android NDK}
-
-L NDK (Native Development Kit) è uno strumento che permette di implementare parte dell'applicazione usando codice scritto in linguaggio nativo come il C ed il C++. Per alcune applicazioni può essere utile in quanto si può riutilizzare le librerie scritte in tali linguaggi. L'uso di tale strumento non da però beneficio per la maggior parte delle applicazioni ed è da usare quindi con parsimonia (spesso l'aumento delle performance dovuto all'utilizzo di codice nativo non giustifica l'aumento di complessità). Tipicamente buoni candidati sono programmi che sono CPU-intensive che non allocano molta memoria come simulazioni fisiche ed analisi dei segnali. Nel caso specifico sono stati effettuati dei test per verificare se la quantità di chiamate verso la libreria C/C++ OpenCV giustifica tale strumento. 
-
-\subsubsection{Android SDK}
-
-Le applicazioni di Android sono sviluppate all'interno di un framework, ossia di una struttura dati specifica. La struttura del framework è molto chiara se si utilizza l'ambiente di sviluppo (Android SDK) con Eclipse; il mancato utilizzo di Eclipse, tuttavia, non impedisce di scrivere applicazioni Android funzionanti.
-Le applicazioni Android sono caratterizzate da una certa dualità: parti dinamiche scritte in Java e parti statiche scritte in XML. Tipico delle parti statiche possono essere quelle caratteristiche che non cambiano durante l'esecuzione dell'applicazione, come per esempio il colore dello sfondo. Tipico delle parti dinamiche sono invece gli aspetti programmatici come per esempio la gestione degli eventi.
-Questa dualità è però solo apparente. Durante l'esecuzione, infatti, l'ambiente di esecuzione o run-time noto come Dalvik virtual machine (DVM), che in tale ambito sostituisce la consueta Macchina virtuale Java (JVM), esegue sempre un programma. Per lo sviluppo delle applicazioni è disponibile una completa documentazione[98] la quale, anche graficamente, riprende la struttura tipica della documentazione Java[99] del sito Oracle.
-
-Tramite l'SDK possiamo passare dalla descrizione della nostra applicazione alla sua effettiva esecuzione sia in emulazione, sia su un dispositivo concreto. Per descrivere l'applicazione al dispositivo prescelto si utilizza il file Manifest.xml. Possiamo quindi affermare che un'applicazione è descritta completamente da una tripletta:
-
-\begin{itemize}
-\item Codice Java
-\item Risorse statiche xml
-\item Manifest.xml
-\end{itemize}
-
-Il codice Java viene poi compilato insieme all'XML per generare un file con estensione .apk: esso contiene il bytecode per la cosiddetta Dalvik Virtual Machine (DVM). I passi successivi servono per installare il bytecode nel dispositivo (ed eseguirlo in emulazione).
-
-
-
-\subsubsection{Android FD-Library}
-
-All'interno delle SDK Android è presente una API per il riconoscimento facciale: Android.Media.FaceDetector. Questa classe permette, data un immagine, di trovare le eventuali facce presenti attraverso il semplice utilizzo del metodo findFaces(). Ogni istanza ritornata viene salvata in un array Faces[] e contiene:
-
-\begin{itemize}
-\item Valutazione se si tratta di un volto o meno 
-\item Distanza tra gli occhi (numero di pixel)
-\item Posizione (x,y) del punto medio situato tra i due occhi
-\item Rotazioni di posa della faccia (x,y,z)
-\end{itemize} 
-
-A seguito di valutazioni e di un prototipo usa e getta si è però deciso di non utilizzare in quanto:
-
-\begin{itemize}
-\item Non ritorna il rettangolo che include con precisione la faccia
-
-\item Non consente di utilizzare template a piacimento per la ricerca di feature specializzate (naso, occhi, orecchie, etc.)
-
-\item Prestazioni discrete per una immagine unica, ma non adatta ad un applicazione real-time
-
-\item Supporta solo bitmap in formato RGB\_565 
-
-\item Sono stati rilevati comportamenti evidentemente diversi a seconda del dispositivo utilizzato, e la quantità di bug riportata dalla community Android è rilevante
-\end{itemize}
-
-\subsubsection{OpenCV}
-
-OpenCV è una libreria creata da Intel a scopi di commerciali e di ricerca. E' una libreria open e gratuita, e pertanto il suo codice può essere utilizzato nella sua interezza o in parte. Al momento della stesura di questo documento la versione più recente disponibile è la v2.4.7 specifica per dispositivi Android. Tale versione fornisce un wrapper Java alle librerie OpenCV che fornisce quasi tutte le fonzionalità core. Al fine di garantire il funzionamento di applicativi basati su questa libreria è però necessario installare sul dispositivo un software chiamato OpenCV Manager, che permette all'applicazione ottimizzazioni in base all'hardware presente.
-
-Vi sono due modi d'utilizzo di questa libreria:
-
-\begin{itemize}
-\item \textbf{Ad alto livello}:  utilizzo esclusivo delle Java API. Facilità di sviluppo, ma non permette l'accesso completo alle libreria. Prestazioni minori a causa al gran numero di chiamate JNI (Java Native Interface) verso la libreria
-
-\item \textbf{A basso livello}:  utilizzo dell'interfaccia nativa di openCV. Android permette infatti di eseguire chiamate a funzioni native, ciò significa che è possibile utilizzare l'interfaccia C++ di OpenCV. 
-\end{itemize}
-%----------------------------------------------------------------------------------------
-
-
-
-
-
-\subsection{Associazione classi-requisiti}
-
-
-\section{Implementazione}
-
-
-
-%----------------------------------------------------------------------------------------
-
-\section{Verifica e validazione}
-
-\subsection{Analisi Statica}
-Al fine di portare avanti il processo di verifica con metodo è stato necessario renderlo
-quantificabile. Perciò si sono definite delle metriche sul codice sorgente. Esse sono
-di seguito definite e il loro significato viene descritto e spiegato. Per ogni metrica si
-sono definiti un range di accettazione e un range ottimale.
-
-\subsubsection{Complessità ciclomatica}
-
-Tale metrica indica il numero di cammini linearmente indipendenti percorribili durante
-l'esecuzione di un singolo metodo. Tale metrica è molto importante in quanto ha
-implicazioni dirette sulle attività di testing: infatti essa rappresenta un upper bound
-per il numero di routine di test necessarie per raggiungere un completo branch coverage.
-
-\textbf{Range dichiarato:}
-\begin{itemize}
-\item Accettazione $\leq 15$
-\item Ottimale $\leq 10$
-\end{itemize}
-
-\subsubsection{LOC}
-
-Tale metrica (Lines of Code, linee di codice) indica il numero di linee di codice. Nel conteggio vengono escluse le righe contenenti dichiarazioni di namespaces, tipi, campi, metodi oltre che i metodi astratti e i tipi enumeration.
-Solo il codice effettivamente eseguito è considerato nel conteggio delle righe.
-La metrica LOC non è sempre legata alla produttività del programmatore, ma torna
-utile sia nel calcolo della percentuale di statement coverage e nella valutazione del
-software.
-Essa è indice di manutenibilià (è più semplice manutenere metodi brevi) e quindi
-qualità del codice.
-
-\textbf{Range per metodo:}
-\begin{itemize}
-\item Accettazione $\leq 45$
-\item Ottimale $\leq 15$
-\end{itemize}
-
-\subsubsection{Numero di campi utilizzati per classe}
-
-Indica il numero di membri di classe (campi dati) di una particolare classe. E'
-importante in quanto è indice delle responsabilità andate ad una classe, se viene
-superato può indicare che la classe ne raggruppa troppe altre e andrebbe ulteriormente
-separata in classi distinte.
-
-\textbf{Range dichiarato:}
-\begin{itemize}
-\item Accettazione $\leq 16$
-\item Ottimale $\leq 8$
-\end{itemize}
-
-\subsubsection{Numero di metodi utilizzati per classe}
-
-Indica il numero di metodi di una particolare classe. Similmente al numero di campi
-per classe è importante in quanto è indice delle responsabilità andate ad una classe, se
-viene superato può indicare che la classe ha troppe funzionalità e andrebbe separata.
-
-\textbf{Range dichiarato:}
-\begin{itemize}
-\item Accettazione $\leq 16$
-\item Ottimale $\leq 8$
-\end{itemize}
-
-\subsubsection{LCOM e LCOM HS}
-
-Si vuole definire una metrica a partire da questa definizione: se una classe ha una sola responsabilità si
-dice che essa è coesa. In generale una classe risulterà coesa se i suoi metodi sono
-strettamente legati fra loro. Quando metodi distinti non usano attributi o metodi
-comuni significa che essi non condividono nulla e che quindi potrebbero venir separati.
-La metrica di LCOM misura quindi quanto poco una classe è coesa. Alcune formule per il
-calcolo di LCOM sono le seguenti:
-
-\begin{center}
-\textbf{LCOM} =  $1-(\sum(MF)/M \ast F) $  \\
-\textbf{LCOM HS} = $(M-(\sum(MF)/F))\ast(M-1)$
-\end{center}
-
-Dove:
-\begin{itemize}
-\item M è il numero di metodi nella classe. Si considerano sia i metodi statici sia quelli di istanza, ed include inoltre i costruttori,getters e setters ed eventuali metodi del tipo add/remove
-\item F è il numero di campi dati d'istanza all'interno della classe 
-\item MF è il numero di metodi della classe che accedono un particolare campo dati di tipo classe
-\item $\sum(MF)$ è la somma degli MF tra tutti i campi d'istanza della classe
-\end{itemize}
-
-L'idea alla base di tali formule è che una classe perfettamente coesa utilizza tutti i
-suoi campi dati di tipo classe all'interno di ogni suo metodo il che comporta :
-
-\begin{center}
- $(\sum(MF) = M \ast F) \Leftrightarrow LCOM = 0 $
-\end{center}
-
-
-
-La differenza tra LCOM e la sua versione HS (Hendersons-Sellers) è che la prima
-ritorna dei valori nel range [0-1] mentre la seconda nel range [1-2]. La versione HS è
-considerata più efficace per la rilevazione dei tipi scarsamente coesi.
-Tale metrica è interessante, ma va trattata con cautela (basti pensare una classe
-che ha n campi dati, n getters e n setters, essa risulterà scarsamente coesa, il che
-non rispecchia la realtà). Infatti essa non va valutata singolarmente, ma deve essere
-inserita in un contesto di valutazione che comprende altre variabili, soprattutto il
-numero di campi e il numero di metodi. 
-
-\textbf{Range dichiarato:}
-\begin{itemize}
-\item Accettazione $\leq 0.8$
-\item Ottimale = 0
-\end{itemize}
-
-
-\subsection{Analisi Dinamica}
-\subsection{Test di Validazione}
-
-\section{Esiti attività}
-
-\section{Valutazione prestazioni}
-
-Al fine di verificare le prestazioni ottenute in media dall'applicativo, l'azienda ha fornito 4 dispositivi che rappresentano all'anno della stesura di questo documento (2014) le possibili fasce di mercato.
-
-I dispositivi forniti sono:
-
-\begin{itemize}
-\item \textbf{Fascia Alta - \textit{Galaxy S4}} 
-	\begin{itemize}
-		\item CPU quad core 1.6GHz Cortex A15 
-		\item RAM 2 GB 
-		\item Fotocamera : posteriore: 13 MP , anteriore 2.1 MP
-		\item Android 4.2.2 Jelly Bean 
-	\end{itemize}
-\item \textbf{Fascia Media - \textit{Galaxy S3 Mini}}
-	\begin{itemize}
-		\item CPU 1 GHz dual core ARM Cortex A9
-		\item RAM 1 GB 
-		\item Fotocamera : posteriore: 5 MP , anteriore 1 MP
-		\item Android 4.1.1 Jelly Bean 
-	\end{itemize}
-\item \textbf{Fascia Bassa - \textit{Galaxy S}}
-	\begin{itemize}
-		\item CPU 0.8 GHz single core ARM Cortex A9
-		\item RAM 1 GB 
-		\item Fotocamera : anteriore 0.8 MP
-		\item Android 2.3.0 Gingerbread
-	\end{itemize}
-\end{itemize}
-
-Dal momento che le prestazioni possono dipendere dalla qualità della luce e dalla distanza dell utente dal dispositivo, si è preferito testare l'applicazione utilizzando video come input. Le variabili da tenere in considerazione sono risoluzione, numero di volti , numero di falsi positivi, numero di fotogrammi medi per secondo al termine di ogni video. I video sono sono volutamente caratterizzati da camere mobili, e da scene in cui non sono presenti persone al fine di verifica la presenza di falsi positivi.
-
-I video utilizzati sono reperibili direttamente dal web ai link:
-
-\begin{itemize}
-\item[•] \href{http://www.youtube.com/watch?v=IIdGxR-aU6o}{Video 1}
-\item[•] \href{http://www.youtube.com/watch?v=yWPyRSURYFQ}{Video 2}
-\item[•] \href{http://www.youtube.com/watch?v=sL7cqpIvvRk}{Video 3}
-\end{itemize}
-
-Risoluzioni utilizzate:
-
-\begin{itemize}
-\item[•] $1280\ast960$ 
-\item[•] $640\ast480$ 
-\item[•] $320\ast240$ 
-\end{itemize}
-
-I seguenti test sono stati effettuati con parametri i seguenti parametri:
-\begin{itemize}
-\item \textit{FdActivity::mMinNeighbors} = 3 (sono necessari almeno 3 hit per frame per confermare positivamente il volto)
-\item \textit{FdActivity::mMinSize} = -1  
-\item \textit{FdActivity::mMaxSize} = -1
-\item \textit{FdActivity::mScaleFactor} = 1.0 
-\end{itemize}
-
-In questo modo ci si assicura che il costo computazionale per ogni frame sia massimo (il metodo di riconoscimento facciale terminerà solo dopo aver valutato l'immagine nella sua interezza). 
-Dato che per ogni singolo frame vi possono essere più hits corrispondenti allo stesso volto, è stata creata una semplice funzione ad hoc che permetta di contare un solo volto per set coincidenti di hits. 
-
-\begin{figure}[h]\centering  
-\includegraphics[scale=0.6]{../Figures/graph_1.png}
-\caption[Long caption]{Caption}
-\label{pic-a}
-\end{figure}
-
-Al variare dei dispositivi non vi è alcuna differenza nei risultati (quantità di volti rilevati + $\varepsilon$(falsi positivi rilevati)) se non al variare del parametro \textit{FdActivity::mMinNeighbors}. Infatti,prendendo come risoluzione di riferimento $640 \ast 480$, sono stati ottenuti i seguenti risultati
-\\
-GRAFICO A RES FISSA CON NUM FALSI POSITIVI E NEGATIVI AL VARIARE DELLA RETENTION 
-\\
-I risultati sono però stati totalmente differenti nell'utilizzo reale utilizzando la fotocamera posteriore come input dei frame al posto dei video (che garantivano un framerate costante di 24 fotogrammi per secondo). 
-\\
-GRAFICO LUMINOSITA NORMALE
-
-GRAFICO LUMINOSITA BASSA
-\\
-Infine si può notare come vi siano grosse discrepanze di prestazioni al variare della fotocamera d'input (Anteriore o Posteriore). Questo è dovuto al fatto che generalmente la fotocamera posteriore è di qualità maggiore (sensore di dimensioni maggiori, diaframma più aperto ed ISO che può raggiungere valori più elevati)
-\\
-GRAFICO FRONTALE VS POSTERIORE
-
-\subsection{Considerazioni}
-
-A seguito dei test effettuati l'idea è che i dispositivi correntemente presenti sul mercato abbiamo una potenza computazionale più che sufficiente per eseguire tali task con prestazioni discrete e garantiscano un'esperienza d'utilizzo adeguata. Il maggior problema riscontrato è sicuramente la qualità della fotocamera che può condizionare drasticamente le performance se posta in condizione d'utilizzo non ottimale. Il software preinstallato sullo smartphone infatti, in condizioni di bassa luminosità, tende ad alzare il valore ISO (sensibilità del sensore) ed ad utilizzare un diaframma il più aperto possibile. La necessità di miniaturizzare l'hardware fotografico ha però come conseguenza quella di non poter avere sensori e lenti di dimensioni adeguate. Questo si traduce in bassa qualità, e pertanto per ogni singolo frame di un video sarà necessario un tempo di esposizione molto elevato. Lo stream di fotogrammi risulterà quindi caratterizzato da un framerate molto basso, mettendo il processore in attesa attiva del fotogramma da processare. 
-
-
-%----------------------------------------------------------------------------------------
 

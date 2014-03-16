@@ -1,0 +1,48 @@
+<html>
+<head>
+<title>JS Charts</title>
+<script type="text/javascript" src="jscharts.js"></script>
+</head>
+<body>
+<div id="chart_container">Loading chart...</div>
+<script type="text/javascript">
+	var myChart = new JSChart('chart_container', 'line', '');
+	myChart.setDataArray([[1, 42],[5, 35],[9, 26]], 'Galaxy S4');
+myChart.setDataArray([[1, 28],[5, 21],[9, 15]], 'Galaxy S3 Mini');
+myChart.setDataArray([[1, 16],[5, 9],[9, 6]], 'Galaxy Fame');
+	myChart.colorize(['#3E90C9','#3E90C9','#3E90C9']);
+	myChart.setSize(450, 450);
+	myChart.setAxisValuesNumberY(5);
+	myChart.setIntervalStartY(0);
+	myChart.setIntervalEndY(45);
+	myChart.setLabelX([1,'320*240']);
+	myChart.setLabelX([5,'640*480']);
+	myChart.setLabelX([9,'1280*720']);
+	myChart.setAxisValuesNumberX(5);
+	myChart.setShowXValues(false);
+	myChart.setTitleColor('#454545');
+	myChart.setAxisValuesColor('#454545');
+	myChart.setTooltip([1,'']);
+	myChart.setTooltip([2,'']);
+	myChart.setTooltip([3,'']);
+	myChart.setTooltip([4,'']);
+	myChart.setTooltip([5,'']);
+	myChart.setTooltip([6,'']);
+	myChart.setTooltip([7,'']);
+	myChart.setTooltip([8,'']);
+	myChart.setTooltip([9,'']);
+	myChart.setTooltip([10,'']);
+	myChart.setFlagColor('#9D16FC');
+	myChart.setFlagRadius(4);
+	myChart.setLegendShow(true);
+	myChart.setLegendPosition('right top');
+	myChart.setLineColor('#00CC00', 'Galaxy Fame');
+	myChart.setLineColor('#8B8D85', 'Galaxy S3 Mini');
+	myChart.setLabelX(['Risoluzione','']);
+	myChart.setLabelX([0,'Risoluzione']);
+	myChart.setAxisNameX('Risoluzione', false);
+	myChart.setAxisPaddingRight(45);
+	myChart.draw();
+</script>
+</body>
+</html>

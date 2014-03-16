@@ -1,0 +1,102 @@
+% Chapter 1
+
+\chapter{Valutazione retrospettiva} % Main chapter title
+
+\label{Chapter4} % For referencing the chapter elsewhere, use \ref{Chapter1} 
+
+\lhead{Capitolo 4. \emph{Valutazione Retrospettiva}} % This is for the header on each page - perhaps a shortened title
+
+%----------------------------------------------------------------------------------------
+
+\section{Copertura dei Requisiti}
+
+Vengono riportate le tabelle con gli esiti dell'attività di sviluppo. Per ogni
+requisito viene riportato l'esito dello stesso dopo lo sviluppo e l'implementazione del
+software. L'esito è stato diviso nelle seguenti categorie:
+\begin{itemize}
+\item \textbf{Soddisfatto:} Indica che il requisito è stato implementato con successo e quindi
+soddisfatto. Colore associato \textcolor{green}{verde}
+\item \textbf{Non soddisfatto:} Indica che il requisito non è stato implementato con successo.
+Colore associato \textcolor{red}{rosso}
+\item \textbf{Incompleto:} Indica che il requisito è stato implementato solo in alcune sue
+parti o che il risultato non è stato raggiunto in modo soddisfacente. Colore associato \textcolor{gray}{grigio}
+\end{itemize}
+
+\begin{center}
+    \begin{longtable}{ | p{2cm} | p{7cm} | p{2cm} |}
+    \hline
+    Requisiti & Descrizione & Esito \\ \hline
+    RFO1 &  L'applicazione deve permettere il rilevamento facciale in tempo reale su dispositivi mobili Android & \textcolor{green}{Soddisfatto}  \\ \hline 
+    RFO1.1 &  L'applicazione deve permettere di avviare il training OpenCV  & \textcolor{green}{Soddisfatto} \\ \hline
+    RFO1.2 &  L'applicazione deve permettere di calibrare la camera corrente  & \textcolor{green}{Soddisfatto}  \\ \hline 
+    RFO1.2.1 &  L'applicazione deve permettere all'utente di selezionare la camera desiderata & \textcolor{green}{Soddisfatto} \\ \hline
+    RFO1.2.2 &  L'applicazione deve permettere all'utente di modificare il tipo di elaborazione della camera & \textcolor{green}{Soddisfatto} \\ \hline
+    RFO1.2.3 &  L'applicazione deve permettere all'utente di modificare la risoluzione del frame in ingresso & \textcolor{green}{Soddisfatto}  \\ \hline
+    RFO1.2.4 &  L'applicazione deve permettere all'utente di modificare la profondità di campionamento (distanza minima e massima su cui effettuare lo scan) & \textcolor{green}{Soddisfatto}  \\ \hline
+    RFO1.2.5 &  L'applicazione deve permettere all'utente di modificare il numero minimo di campionamenti sotto il quale il volto non viene riconosciuto come valido  & \textcolor{green}{Soddisfatto}  \\ \hline
+    RFO1.2.6 &  L'applicazione deve permettere all'utente di abilitare di abilitare/disabilitare la ricerca delle features in tempo reale  & \textcolor{green}{Soddisfatto}  \\ \hline
+    RFO1.2.7 &  L'applicazione deve permettere all'utente di abilitare/disabilitare la modalità contrasto e/o monocromatica  & \textcolor{green}{Soddisfatto}  \\ \hline
+    RFD1.3 &  L'applicazione deve permettere di cogliere l'orientamento dell'eventuale volto individuato & \textcolor{gray}{Incompleto} \\ \hline    
+    RFD1.4 &  L'applicazione deve permettere di scegliere lo Sprite da utilizzare & \textcolor{green}{Soddisfatto} \\ \hline    
+    RFO1.4.1 &  L'applicazione deve caricare una lista di Sprites, che saranno successivamente selezionabili dall'utente & \textcolor{green}{Soddisfatto}  \\ \hline
+    RFO1.4.2 &  L'applicazione deve permettere all'utente di selezionare uno o più Sprites desiderati da una ListView presente all'interno dell'interfaccia grafica  & \textcolor{green}{Soddisfatto}  \\ \hline
+    RFO1.4.3 &  L'applicazione deve poter renderizzare gli Sprites precedentemente selezionati & \textcolor{green}{Soddisfatto} \\ \hline    
+    RFO2 &  L'applicazione deve permettere di rilevare volti a partire da un immagine statica su dispositivi mobili Android & \textcolor{green}{Soddisfatto}  \\ \hline
+    RFO2.1 &  L'applicazione deve permettere all'utente di caricare una foto dal proprio smartphone & \textcolor{green}{Soddisfatto}  \\ \hline
+    RFO2.2 &  L'applicazione deve permettere di avviare il rilevamento facciale & \textcolor{green}{Soddisfatto} \\ \hline
+    RFD2.3 &   L'applicazione deve permettere di scegliere uno o più Sprites da utilizzare  & \textcolor{green}{Soddisfatto}  \\ \hline 
+    RFO3 &  L'applicazione deve permettere la condivisione di contenuti multimediali & \textcolor{green}{Soddisfatto} \\ \hline
+    RFD3.1 &  L'applicazione deve permettere di ridimensionare la foto scattata in base a formati predefiniti & \textcolor{green}{Soddisfatto} \\ \hline
+    RFD3.2 &  L'applicazione deve permettere di condividere la foto ottenuta verso applicazioni di messaggistica interne  & \textcolor{green}{Soddisfatto} \\ \hline
+    RFD3.2.1 &  L'applicazione deve fornire l'utente di un bottone attraverso il quale può esprimere il suo intento di condividere il contenuto  & \textcolor{green}{Soddisfatto} \\ \hline
+    RFD3.2.2 &  L'applicazione deve rispondere fornendo graficamente una risposta contenente i servizi di inoltro disponibili  & \textcolor{green}{Soddisfatto} \\ \hline
+    RFD3.2.3 &  L'applicazione deve condividere il contenuto multimediale attraverso il servizio selezionato  & \textcolor{green}{Soddisfatto} \\ \hline    
+    RFD3.3 &  L'applicazione deve permettere il login facebook e condividere la foto su quest ultimo  & \textcolor{green}{Soddisfatto} \\ \hline
+    RFD3.3.1 &  L'applicazione deve permettere l'inoltro di una richiesta di accesso verso i server Facebook & \textcolor{green}{Soddisfatto} \\ \hline
+    RFD3.3.2 &  L'applicazione deve permettere l'inserimento di un testo da allegare alla foto & \textcolor{green}{Soddisfatto} \\ \hline
+    RFD3.3.3 &  L'applicazione deve permettere il caricamento della foto sulla piattaforma Facebook & \textcolor{green}{Soddisfatto} \\ \hline
+    RFD4 &  L'applicazione deve mantenere un framerate minimo di 15 fotogrammi al secondo & \textcolor{red}{Non Soddisfatto} \\ \hline
+    \end{longtable}
+\end{center}
+
+
+%----------------------------------------------------------------------------------------
+\newpage
+\section{Prodotto finale}
+
+
+
+\section{Conoscenze acquisite}
+
+Durante l'esperienza di stage ho approfondito le mie capacità in ognuna delle fasi principali
+dello sviluppo software. Ho avuto modo di sviluppare competenze in diverse tecnologie e nel loro uso. Le più rilevanti dal mio punto di vista sono le seguenti:
+
+\begin{itemize}
+\item \textbf{Java} Le precedenti conoscenze teoriche apprese durante il corso di Programmazione Concorrente e Distribuita sono state applicate in maniera concreta di fronte a problemi reali. 
+\item \textbf{Android Studio} Le conoscenze riguardo a questo ambiente prima dell'inizio dello stage erano pressochè nulle in quanto non mi ero mai trovato ad affrontare
+questo argomento. Ho avuto modo di conoscere ed ad utilizzare parte dell'enorme mole di strumenti offerti allo sviluppatore, in particolar modo quelli dediti al debug (DDMS), all'analisi della memoria e alla suite di test.
+\item \textbf{Facebook} Le conoscenze riguardo a questo ambiente prima dell'inizio dello stage erano pressochè nulle. Grazie ai numerosi tutorial ufficiali presenti in rete è stato possibile realizzare facilmente i requisiti definiti.
+\item \textbf{OpenCV} Lo studio di tale libreria mi ha permesso di conoscere, nei limiti del tempo concesso per lo stage, questo variegato strumento di analisi ed elaborazione delle immagini. In particolar modo è stato molto interessante lo studio di come gli oggetti vengono campionati per poi essere utilizzati all'interno di un classificatore. Inoltre, a fini prestazionali, è stata significativa l'analisi effettuata per variare i parametri di rilevamento in base all'hardware presente sul dispositivo. 
+\end{itemize}
+
+%----------------------------------------------------------------------------------------
+
+
+
+%----------------------------------------------------------------------------------------
+
+\section{Conoscenze possedute e relazione con la preparazione accademica}
+
+Durante lo svolgimento dello stage si sono potute applicare le conoscenze già
+acquisite per la gestione di progetto e per il miglior sviluppo possibile dell'applicazione,
+potendo provare sul campo l'importanza dell'analisi dei requisiti e della
+validazione, i benefici di una attenta progettazione dell'architettura e
+di una strategia formale ed estensiva di test del prodotto.
+Credo che la preparazione accademica precedente all'attività di stage
+sia stata adeguata perché potessi affrontare al meglio il progetto, non tanto
+nelle conoscenze fornite quanto piuttosto nel metodo insegnato durante tutti i
+corsi del percorso di laurea triennale. Inoltre il supporto del tutor aziendale Marcus Oblack mi ha dato la motivazione e la curiosità di informarmi sulle tecnologie necessarie per condurre in maniera efficace la creazione di questo progetto.
+
+Per concludere penso che questo percorso sia stato impegnativo, vivo e stimolante. Mi ha
+permesso di mettere in pratica le conoscenze e le capacità acquisite durante la mia vita ed il mio il percorso di studi. Mi ritengo quindi pienamente soddisfatto del suo esito finale.
+

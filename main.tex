@@ -31,9 +31,41 @@
 
 \usepackage[square, numbers, comma, sort&compress]{natbib} % Use the natbib reference package - read up on this to edit the reference style; if you want text (e.g. Smith et al., 2012) for the in-text references (instead of numbers), remove 'numbers' 
 \usepackage{setspace}
+\usepackage{listings}
+\usepackage{color}
+\usepackage{float}
+
+\definecolor{dkgreen}{rgb}{0,0.6,0}
+\definecolor{gray}{rgb}{0.5,0.5,0.5}
+\definecolor{mauve}{rgb}{0.58,0,0.82}
+\definecolor{doom}{rgb}{0.902, 0.902, 0.980}
+\definecolor{doomblue}{rgb}{0.098, 0.098, 0.439}
+
+\lstset{
+  language=Java,
+  aboveskip=3mm,
+  belowskip=3mm,
+  showstringspaces=false,
+  columns=flexible,
+  basicstyle={\small\ttfamily},
+  numbers=left,
+  numberstyle=\tiny\color{gray},
+  keywordstyle=\color{blue},
+  commentstyle=\color{dkgreen},
+  stringstyle=\color{mauve},
+  breaklines=true,
+  breakatwhitespace=true
+  tabsize=0,
+  frame=shadowbox,
+  rulesepcolor=\color{doomblue},
+  backgroundcolor=\color{doom}
+}
+
 \singlespacing
 %\hypersetup{urlcolor=red, colorlinks=true} % Colors hyperlinks in blue - change to black if annoying
 \title{\ttitle} % Defines the thesis title - don't touch this
+
+
 
 \begin{document}
 
@@ -69,7 +101,7 @@
 \textsc{\Large Dipartimento di Matematica \\
 Corso di Laurea in Informatica}\\[1.0cm] % Thesis type
 
-\includegraphics[scale=0.15]{../Figures/logo_uni_bw.png}\\[1.5cm]
+\includegraphics[scale=0.15]{/home/nicgen/Scrivania/thesis/Figures/logo_uni_bw.png}\\[1.5cm]
 
 %\HRule \\[0.4cm] % Horizontal line
 {\huge \bfseries Face Detection Engine su piattaforma Android}\\[2.5cm] % Thesis title
@@ -90,7 +122,6 @@ Corso di Laurea in Informatica}\\[1.0cm] % Thesis type
  
 {\large Anno accademico 2013/2014}\\[4cm] % Date
 
- 
 \vfill
 \end{center}
 
@@ -107,17 +138,24 @@ Corso di Laurea in Informatica}\\[1.0cm] % Thesis type
 \clearpage
 
 \vspace*{7cm}
-\begin{centering}
-\textbf{Sommario}\\
 
+\textbf{Organizzazione del Documento}\\
 
-La presente relazione ha come scopo la descrizione dell'attivita di stage, svolta dal sottoscritto,
-nel periodo ottobre 2013 - gennaio 2014 presso l'azienda SanMarco Informatica. Il primo capitolo descrive l'azienda
-ospitante. Il secondo capitolo espone le motivazioni e gli obiettivi del progetto di stage. Il terzo
-capitolo illustra in modo approfondito le attivita effettuate per raggiungere gli obiettivi prefissati.
-Il quarto ed ultimo capitolo riporta una valutazione a posteriori sul lavoro svolto, sulle conoscenze
-acquisite e sulla distanza tra le conoscenze richieste e le conoscenze possedute.
-\end{centering}
+La presente relazione ha come scopo la descrizione dell'attività di Stage, svolta dal sottoscritto, nel periodo Ottobre 2013 - Gennaio 2014 presso l'azienda SanMarco Informatica. 
+
+Essa è suddivisa nei seguenti capitoli:
+
+\begin{itemize}
+\item[1] \textbf{Introduzione}: descrive l'azienda ospitante.
+\item[2] \textbf{Progetto Aziendale}: espone le motivazioni e gli obiettivi del progetto di Stage.
+\item[3] \textbf{Pianificazione ed Analisi}: illustra le attività effettuate per raggiungere gli obiettivi prefissati, in particolar modo la rilevazione dei casi d'uso.
+\item[4] \textbf{Progettazione}: illustra la struttura individiata e le problematiche da risolvere
+\item[5] \textbf{Verifica e Validazione}: illustra i processi di verifica e di validazione (analisi statica, dinamica e test di validazioni definiti).
+\item[6] \textbf{Esiti Attività}: risultati formali delle attività di Stage.
+\item[7] \textbf{Valutazione Retrospettiva}: porta una valutazione a posteriori sul lavoro svolto, sulle conoscenze acquisite e sulla distanza tra le conoscenze richieste e le conoscenze possedute.
+
+\end{itemize}
+
 
 \clearpage
 \textbf{Convenzioni tipografiche}\\
@@ -146,8 +184,6 @@ convenzioni tipografiche:
 \lhead{\emph{List of Figures}} % Set the left side page header to "List of Figures"
 \listoffigures % Write out the List of Figures
 
-\lhead{\emph{List of Tables}} % Set the left side page header to "List of Tables"
-\listoftables % Write out the List of Tables
 
 %----------------------------------------------------------------------------------------
 %	DEDICATION
@@ -157,7 +193,7 @@ convenzioni tipografiche:
 
 \pagestyle{empty} % Page style needs to be empty for this page
 
-\dedicatory{Dedicato a} % Dedication text
+\dedicatory{dedicato alla mia Famiglia} % Dedication text
 
 \addtocontents{toc}{\vspace{2em}} % Add a gap in the Contents, for aesthetics
 
@@ -176,9 +212,9 @@ convenzioni tipografiche:
 \input{Chapters/Chapter2} 
 \input{Chapters/Chapter3}
 \input{Chapters/Chapter4} 
-%\input{Chapters/Chapter5} 
-%\input{Chapters/Chapter6} 
-%\input{Chapters/Chapter7} 
+\input{Chapters/Chapter5} 
+\input{Chapters/Chapter6} 
+\input{Chapters/Chapter7} 
 
 %----------------------------------------------------------------------------------------
 %	THESIS CONTENT - APPENDICES

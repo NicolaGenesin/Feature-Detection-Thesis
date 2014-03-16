@@ -1,50 +1,95 @@
 \contentsline {chapter}{Contents}{4}{dummy.1}
-\contentsline {chapter}{List of Figures}{6}{dummy.3}
-\contentsline {chapter}{List of Tables}{7}{dummy.5}
+\contentsline {chapter}{List of Figures}{7}{dummy.3}
 \vspace {2em}
-\contentsline {chapter}{\numberline {1}Dominio applicativo}{1}{chapter.7}
-\contentsline {section}{\numberline {1.1}Azienda}{1}{section.8}
-\contentsline {section}{\numberline {1.2}Prodotti e clienti}{1}{section.10}
-\contentsline {section}{\numberline {1.3}Tecnologie}{1}{section.11}
-\contentsline {chapter}{\numberline {2}Progetto Aziendale}{2}{chapter.12}
-\contentsline {section}{\numberline {2.1}Introduzione al riconoscimento facciale}{2}{section.13}
-\contentsline {subsection}{\numberline {2.1.1}Machine Learning}{3}{subsection.14}
-\contentsline {section}{\numberline {2.2}Obiettivi}{3}{section.15}
-\contentsline {section}{\numberline {2.3}Aspettative}{3}{section.16}
-\contentsline {section}{\numberline {2.4}Vincoli}{3}{section.17}
-\contentsline {chapter}{\numberline {3}Attivit\IeC {\`a} di Stage}{5}{chapter.18}
-\contentsline {section}{\numberline {3.1}Pianificazione}{5}{section.19}
-\contentsline {section}{\numberline {3.2}Analisi}{5}{section.20}
-\contentsline {subsection}{\numberline {3.2.1}Casi d'uso}{6}{subsection.21}
-\contentsline {subsection}{\numberline {3.2.2}Requisiti}{6}{subsection.22}
-\contentsline {subsubsection}{\numberline {3.2.2.1}Modello di ciclo di vita}{7}{subsubsection.23}
-\contentsline {section}{\numberline {3.3}Progettazione}{7}{section.24}
-\contentsline {subsection}{\numberline {3.3.1}Architettura}{7}{subsection.25}
-\contentsline {subsection}{\numberline {3.3.2}Tecnologie utilizzate}{7}{subsection.26}
-\contentsline {subsubsection}{\numberline {3.3.2.1}Java}{7}{subsubsection.27}
-\contentsline {subsubsection}{\numberline {3.3.2.2}Android NDK}{7}{subsubsection.28}
-\contentsline {subsubsection}{\numberline {3.3.2.3}Android SDK}{8}{subsubsection.29}
-\contentsline {subsubsection}{\numberline {3.3.2.4}Android FD-Library}{8}{subsubsection.30}
-\contentsline {subsubsection}{\numberline {3.3.2.5}OpenCV}{9}{subsubsection.31}
-\contentsline {subsection}{\numberline {3.3.3}Associazione classi-requisiti}{10}{subsection.32}
-\contentsline {section}{\numberline {3.4}Implementazione}{10}{section.33}
-\contentsline {section}{\numberline {3.5}Verifica e validazione}{10}{section.34}
-\contentsline {subsection}{\numberline {3.5.1}Analisi Statica}{10}{subsection.35}
-\contentsline {subsubsection}{\numberline {3.5.1.1}Complessit\IeC {\`a} ciclomatica}{10}{subsubsection.36}
-\contentsline {subsubsection}{\numberline {3.5.1.2}LOC}{10}{subsubsection.37}
-\contentsline {subsubsection}{\numberline {3.5.1.3}Numero di campi utilizzati per classe}{11}{subsubsection.38}
-\contentsline {subsubsection}{\numberline {3.5.1.4}Numero di metodi utilizzati per classe}{11}{subsubsection.39}
-\contentsline {subsubsection}{\numberline {3.5.1.5}LCOM e LCOM HS}{11}{subsubsection.40}
-\contentsline {subsection}{\numberline {3.5.2}Analisi Dinamica}{12}{subsection.41}
-\contentsline {subsection}{\numberline {3.5.3}Test di Validazione}{12}{subsection.42}
-\contentsline {section}{\numberline {3.6}Esiti attivit\IeC {\`a}}{12}{section.43}
-\contentsline {section}{\numberline {3.7}Valutazione prestazioni}{12}{section.44}
-\contentsline {subsection}{\numberline {3.7.1}Considerazioni}{15}{subsection.46}
-\contentsline {chapter}{\numberline {4}Valutazione retrospettiva}{16}{chapter.47}
-\contentsline {section}{\numberline {4.1}Copertura dei Requisiti}{16}{section.48}
-\contentsline {section}{\numberline {4.2}Conoscenze acquisite}{17}{section.49}
-\contentsline {section}{\numberline {4.3}Distanza tra conoscenze richieste e conoscenze possedute}{17}{section.50}
+\contentsline {chapter}{\numberline {1}Introduzione}{1}{chapter.5}
+\contentsline {section}{\numberline {1.1}Azienda}{1}{section.6}
+\contentsline {section}{\numberline {1.2}Progetto}{2}{section.8}
+\contentsline {section}{\numberline {1.3}Processi Interni}{2}{section.9}
+\contentsline {chapter}{\numberline {2}Progetto Aziendale}{4}{chapter.11}
+\contentsline {section}{\numberline {2.1}Rilevamento facciale}{4}{section.12}
+\contentsline {subsection}{\numberline {2.1.1}Machine Learning}{5}{subsection.13}
+\contentsline {section}{\numberline {2.2}Condivisione Social}{6}{section.16}
+\contentsline {section}{\numberline {2.3}Obiettivi}{7}{section.18}
+\contentsline {section}{\numberline {2.4}Aspettative}{7}{section.19}
+\contentsline {section}{\numberline {2.5}Vincoli}{8}{section.20}
+\contentsline {chapter}{\numberline {3}Pianificazione ed Analisi}{9}{chapter.21}
+\contentsline {section}{\numberline {3.1}Pianificazione}{9}{section.22}
+\contentsline {section}{\numberline {3.2}Analisi}{10}{section.24}
+\contentsline {subsection}{\numberline {3.2.1}Casi d'uso}{10}{subsection.25}
+\contentsline {subsubsection}{\numberline {3.2.1.1}UC1: Principale (RT)}{10}{subsubsection.26}
+\contentsline {subsubsection}{\numberline {3.2.1.2}UC2: Principale (S)}{11}{subsubsection.28}
+\contentsline {subsubsection}{\numberline {3.2.1.3}UC3: Secondario}{12}{subsubsection.30}
+\contentsline {subsubsection}{\numberline {3.2.1.4}UC1.1: (RT)::Rilevamento}{12}{subsubsection.32}
+\contentsline {subsubsection}{\numberline {3.2.1.5}UC1.2: (RT)::Calibrazione Camera}{12}{subsubsection.33}
+\contentsline {subsubsection}{\numberline {3.2.1.6}UC1.3: (RT)::Orientamento Volto}{13}{subsubsection.35}
+\contentsline {subsubsection}{\numberline {3.2.1.7}UC1.4: (RT)::Selezione Sprite}{14}{subsubsection.36}
+\contentsline {subsubsection}{\numberline {3.2.1.8}UC2.1: (S)::Caricamento Foto}{14}{subsubsection.38}
+\contentsline {subsubsection}{\numberline {3.2.1.9}UC2.2: (S)::Rilevamento}{15}{subsubsection.39}
+\contentsline {subsubsection}{\numberline {3.2.1.10}UC2.3: (S)::Selezione Sprite}{15}{subsubsection.40}
+\contentsline {subsubsection}{\numberline {3.2.1.11}UC3.1: Secondario::Ridimensionamento frame}{15}{subsubsection.41}
+\contentsline {subsubsection}{\numberline {3.2.1.12}UC3.2: Secondario::Condivisione Interna}{15}{subsubsection.42}
+\contentsline {subsubsection}{\numberline {3.2.1.13}UC3.3: Secondario::Facebook}{16}{subsubsection.44}
+\contentsline {subsubsection}{\numberline {3.2.1.14}UC1.2.1: (RT)::Calibrazione Camera::Selezione Camera}{17}{subsubsection.46}
+\contentsline {subsubsection}{\numberline {3.2.1.15}UC1.2.2: (RT)::Calibrazione Camera::Elaborazione Camera}{17}{subsubsection.47}
+\contentsline {subsubsection}{\numberline {3.2.1.16}UC1.2.3: (RT)::Calibrazione Camera::Risoluzione Camera}{17}{subsubsection.48}
+\contentsline {subsubsection}{\numberline {3.2.1.17}UC1.2.4: (RT)::Calibrazione Camera::Profondit\IeC {\`a} Camera}{17}{subsubsection.49}
+\contentsline {subsubsection}{\numberline {3.2.1.18}UC1.2.5: (RT)::Calibrazione Camera::Campionamenti Camera}{18}{subsubsection.50}
+\contentsline {subsubsection}{\numberline {3.2.1.19}UC1.2.6: (RT)::Calibrazione Camera::Parti Facciali}{18}{subsubsection.51}
+\contentsline {subsubsection}{\numberline {3.2.1.20}UC1.2.7: (RT)::Calibrazione Camera::Modalit\IeC {\`a} Camera}{18}{subsubsection.52}
+\contentsline {subsubsection}{\numberline {3.2.1.21}UC1.4.1: (RT)::Selezione Sprite::Caricamento Sprites}{18}{subsubsection.53}
+\contentsline {subsubsection}{\numberline {3.2.1.22}UC1.4.2: (RT)::Selezione Sprite::Selezione Sprites}{18}{subsubsection.54}
+\contentsline {subsubsection}{\numberline {3.2.1.23}UC1.4.3: (RT)::Selezione Sprite::Visione Sprites}{18}{subsubsection.55}
+\contentsline {subsubsection}{\numberline {3.2.1.24}UC3.2.1: Secondario::Condivisione Interna::Intent }{19}{subsubsection.56}
+\contentsline {subsubsection}{\numberline {3.2.1.25}UC3.2.2: Secondario::Condivisione Interna::Selezione}{19}{subsubsection.57}
+\contentsline {subsubsection}{\numberline {3.2.1.26}UC3.2.3: Secondario::Condivisione Interna::Condivisione}{19}{subsubsection.58}
+\contentsline {subsubsection}{\numberline {3.2.1.27}UC3.3.1: Secondario::Facebook::Login}{19}{subsubsection.59}
+\contentsline {subsubsection}{\numberline {3.2.1.28}UC3.3.2: Secondario::Facebook::Messaggio}{19}{subsubsection.60}
+\contentsline {subsubsection}{\numberline {3.2.1.29}UC3.3.3: Secondario::Facebook::Condivisione}{20}{subsubsection.61}
+\contentsline {subsection}{\numberline {3.2.2}Associazione Requisiti-Casi d'uso}{20}{subsection.62}
+\contentsline {chapter}{\numberline {4}Progettazione}{23}{chapter.64}
+\contentsline {section}{\numberline {4.1}Architettura}{23}{section.65}
+\contentsline {subsection}{\numberline {4.1.1}Package Activity}{24}{subsection.66}
+\contentsline {subsection}{\numberline {4.1.2}Package Service}{26}{subsection.68}
+\contentsline {subsection}{\numberline {4.1.3}Package Model}{26}{subsection.69}
+\contentsline {subsection}{\numberline {4.1.4}Package Core}{26}{subsection.70}
+\contentsline {subsection}{\numberline {4.1.5}Package Social}{27}{subsection.71}
+\contentsline {subsection}{\numberline {4.1.6}Package Utility}{27}{subsection.72}
+\contentsline {subsection}{\numberline {4.1.7}Package Adapter}{28}{subsection.73}
+\contentsline {section}{\numberline {4.2}Associazione Classi-Requisiti}{29}{section.74}
+\contentsline {section}{\numberline {4.3}Tecnologie utilizzate}{30}{section.76}
+\contentsline {subsection}{\numberline {4.3.1}Java}{30}{subsection.77}
+\contentsline {subsection}{\numberline {4.3.2}Android NDK}{30}{subsection.78}
+\contentsline {subsection}{\numberline {4.3.3}Android Studio}{30}{subsection.79}
+\contentsline {subsection}{\numberline {4.3.4}Android FD-Library}{31}{subsection.80}
+\contentsline {subsection}{\numberline {4.3.5}OpenCV}{31}{subsection.81}
+\contentsline {subsection}{\numberline {4.3.6}GenyMotion}{32}{subsection.82}
+\contentsline {subsection}{\numberline {4.3.7}JTest}{32}{subsection.83}
+\contentsline {subsection}{\numberline {4.3.8}Doxygen}{32}{subsection.84}
+\contentsline {subsection}{\numberline {4.3.9}Subversion}{32}{subsection.85}
+\contentsline {section}{\numberline {4.4}Problematiche}{33}{section.86}
+\contentsline {subsection}{\numberline {4.4.1}Riduzione complessit\IeC {\`a}}{33}{subsection.87}
+\contentsline {subsection}{\numberline {4.4.2}Stima della posa}{39}{subsection.196}
+\contentsline {subsection}{\numberline {4.4.3}Calibrazione dinamica}{41}{subsection.198}
+\contentsline {chapter}{\numberline {5}Verifica e Validazione}{42}{chapter.199}
+\contentsline {section}{\numberline {5.1}Analisi Statica}{42}{section.200}
+\contentsline {subsection}{\numberline {5.1.1}Complessit\IeC {\`a} ciclomatica}{42}{subsection.201}
+\contentsline {subsection}{\numberline {5.1.2}LOC}{42}{subsection.202}
+\contentsline {subsection}{\numberline {5.1.3}Numero di campi utilizzati per classe}{43}{subsection.203}
+\contentsline {subsection}{\numberline {5.1.4}Numero di metodi utilizzati per classe}{43}{subsection.204}
+\contentsline {subsection}{\numberline {5.1.5}LCOM e LCOM HS}{43}{subsection.205}
+\contentsline {section}{\numberline {5.2}Analisi Dinamica}{45}{section.206}
+\contentsline {section}{\numberline {5.3}Test di Validazione}{45}{section.207}
+\contentsline {chapter}{\numberline {6}Esiti Attivit\IeC {\`a}}{47}{chapter.208}
+\contentsline {section}{\numberline {6.1}Esiti Analisi Statica}{47}{section.209}
+\contentsline {section}{\numberline {6.2}Esiti Test di Validazione}{48}{section.211}
+\contentsline {section}{\numberline {6.3}Analisi Prestazionale}{49}{section.213}
+\contentsline {subsection}{\numberline {6.3.1}Considerazioni}{52}{subsection.215}
+\contentsline {chapter}{\numberline {7}Valutazione retrospettiva}{53}{chapter.216}
+\contentsline {section}{\numberline {7.1}Copertura dei Requisiti}{53}{section.217}
+\contentsline {section}{\numberline {7.2}Prodotto finale}{56}{section.219}
+\contentsline {section}{\numberline {7.3}Conoscenze acquisite}{56}{section.220}
+\contentsline {section}{\numberline {7.4}Conoscenze possedute e relazione con la preparazione accademica}{56}{section.221}
 \vspace {2em}
-\contentsline {chapter}{\numberline {A}Glossario}{18}{appendix.51}
-\contentsline {chapter}{\numberline {B}Riferimenti}{19}{appendix.52}
+\contentsline {chapter}{\numberline {A}Glossario}{57}{appendix.222}
+\contentsline {chapter}{\numberline {B}Riferimenti}{58}{appendix.223}
 \vspace {2em}
