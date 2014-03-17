@@ -32,18 +32,19 @@ Comunque si scelga l'algoritmo, le problematiche che si incontrano nella ricerca
 \item Condizione d'illuminazione non ottimale (sottoesposizione o sovraesposizione eccessiva)
 \item Espressioni facciali non campionate (quando i volti presenti assumono espressioni non presenti nel template di confronto)
 \item Variazione della "messa in posa"
-\item Variazioni d'aspetto del volto (ad esempio i tratti di un volto di una persona di origine asiatica saranno notevolmente diversi da quelli di una persona di origine europea)
+\item Variazioni dei lineamenti del volto (ad esempio i tratti di un volto di una persona di origine asiatica saranno notevolmente diversi da quelli di una persona di origine europea)
+\item Variazione di espressioni facciali
 \end{itemize}
 
 \subsection{Machine Learning}
 
 Data la complessità del problema è difficile creare una soluzione unica che abbia un'accuratezza soddisfacente. Una delle strade migliori è costruire un classificatore e collezionare una grande database di esempi di classificazione, creare una funzione di classificazione parametrizzata e successivamente ottimizzarla. Questa metodologia è definita machine learning. 
 
-Ne è un esempio la tecnica di rilevamento facciale sviluppato da Paul Viola e Michael Jones che utilizza le cosidette \textit{diagonal features} all'interno di un classificatore chiamato \textit{Haar}. Questo classificatore utilizza un algoritmo di tipo \textbf{\textit{AdaBoost}} (Adaptive Boosting) ma lo organizza come una cascata di nodi dove ogni nodo è un un multialbero di classificatori AdaBoost istruiti per avere un altissimo rate di rilevamento. Tale "istruzione" deriva dal training dato dalle Haar-like features ricavate da immagini digitali. Queste immagini contengono volti normalizzati (scalati e traslati) correttamente per un rapporto 1:6000 rispetto al totale delle immagini utilizzate (le rimanenti non rappresentano facce).
+Ne è un esempio la tecnica di rilevamento facciale sviluppato da Paul Viola e Michael Jones che utilizza le cosiddette \textit{diagonal features} all'interno di un classificatore chiamato \textit{Haar}. Questo classificatore utilizza un algoritmo di tipo \textbf{\textit{AdaBoost}} (Adaptive Boosting) ma lo organizza come una cascata di nodi dove ogni nodo è un un multi albero di classificatori AdaBoost istruiti per avere un altissimo rate di rilevamento. Tale "istruzione" deriva dal training dato dalle Haar-like features ricavate da immagini digitali. Queste immagini contengono volti normalizzati (scalati e traslati) correttamente per un rapporto 1:6000 rispetto al totale delle immagini utilizzate (le rimanenti non rappresentano facce).
 
 
 \begin{figure}[H]\centering  
-\includegraphics[scale=0.35]{/workspace/1911_up/Dropbox/thesis/Figures/feature.jpg}
+\includegraphics[scale=0.32]{/workspace/1911_up/Dropbox/thesis/Figures/feature.jpg}
 \caption[Esempio di utilizzo delle features]{Esempio di utilizzo delle features}
 \label{pic-a}
 \end{figure}
@@ -59,13 +60,37 @@ Il valore \textit{k} trovato per la feature \textit{f} è sotto o sopra a una ce
 Tipicamente i nodi sono ordinati dal meno al più complesso (i primi nodi sono generalmente molto semplici). In tal modo si può ridurre notevolmente il costo computazionale di rilevamento del volto, perché le regioni dell'immagine che non lo contengono terminano subito nei primissimi nodi se non al primo.
 
 \begin{figure}[H]\centering  
-\includegraphics[scale=0.3]{/workspace/1911_up/Dropbox/thesis/Figures/boosted.png}
+\includegraphics[scale=0.27]{/workspace/1911_up/Dropbox/thesis/Figures/boosted.png}
 \caption[Binary Rejection cascade]{Binary Rejection cascade}
 \label{pic-a}
 \end{figure}
 
 Tale algoritmo permette di raggiungere un alto tasso di accuratezza, infatti in media il numero di falsi negativi è inferiore all' 1 per cento mentre il numero di falsi positivi si attesta sotto al 40 per cento.
 
+A seguire un esempio .xml di una possibile struttura di classificatore Haar:
+\begin{lstlisting}
+  <stages>
+    <_>
+      <!-- stage 0 -->
+      <trees>
+        <_>
+          <!-- tree 0 -->
+          <_>
+            <!-- root node -->
+            <feature>
+              <rects>
+                <_>
+                  0 0 14 9 -1.</_>
+                <_>
+                  0 3 14 3 3.</_></rects>
+              <tilted>0</tilted></feature>
+            <threshold>-0.1192855015397072</threshold>
+            <left_val>0.7854182124137878</left_val>
+            <right_val>-0.4541360139846802</right_val></_></_>
+        <_>
+          <!-- tree 1 -->
+			.
+\end{lstlisting}
 \section{Condivisione Social}
 
 I siti di reti sociali (social network sites) sono servizi web che tipicamente permettono di:
@@ -79,7 +104,7 @@ Una relazione sociale costruita sulla base di un interesse è totalmente differe
 L'idea alla base di quest'ultima rete è che ogni utente possa avere uno scambio bidirezionale di informazioni con altri utenti. In un'era in cui buona parte della popolazione mondiale utilizza tale strumento di comunicazione, è quindi spesso fondamentale integrare al software funzionalità di condivisione.
 
 \begin{figure}[H]\centering  
-\includegraphics[scale=0.45]{/workspace/1911_up/Dropbox/thesis/Figures/snetwork.png}
+\includegraphics[scale=0.40]{/workspace/1911_up/Dropbox/thesis/Figures/snetwork.png}
 \caption[Mappa distribuzione Social Networks]{Mappa distribuzione Social Networks, Dicembre 2013}
 \label{pic-a}
 \end{figure}
@@ -101,6 +126,7 @@ utilizzo del riconoscimento facciale per variare l'esperienza d'utilizzo del vid
 \item \textbf{Generico}
 utilizzo del riconoscimento facciale per applicazioni ludiche generiche, come ad esempio il face-swapping
 \end{itemize}
+\item \textbf{Generico} riconoscimento di oggetti generici attraverso uso di classificatori istruiti specificatamente
 \end{itemize}  
 
 Secondaria ma non meno importante (obbligatoria) è la creazione di una libreria che permetta una facile instaurazione e comunicazione verso il social network Facebook per la condivisione di foto o di altri contenuti multimediali.
@@ -127,7 +153,7 @@ I vincoli imposti sono:
  	\item Rispettare la timeline preventivata
 \end{itemize}
 
-Nonostante il progetto sia inteso come studio di fattibilità e realizzazione di un prototipo, si dovrà cercare di rispettare le seguenti guidelines Android e Facebook:
+Nonostante il progetto sia inteso più come studio di fattibilità e realizzazione di un prototipo, si dovrà cercare di rispettare le seguenti guidelines Android e Facebook:
 \begin{itemize}
 \item L'applicazione deve richiedere il minor numero di permessi possibile
 \item L'applicazione non deve richiedere permessi di accedere a dati sensibili

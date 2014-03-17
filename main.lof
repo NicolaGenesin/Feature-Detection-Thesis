@@ -3,29 +3,32 @@
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {2.1}{\ignorespaces Esempio di utilizzo delle features}}{4}{figure.caption.13}
 \contentsline {figure}{\numberline {2.2}{\ignorespaces Binary Rejection cascade}}{5}{figure.caption.14}
-\contentsline {figure}{\numberline {2.3}{\ignorespaces Mappa distribuzione Social Networks}}{6}{figure.caption.16}
+\contentsline {figure}{\numberline {2.3}{\ignorespaces Mappa distribuzione Social Networks}}{6}{figure.caption.38}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {3.1}{\ignorespaces Pianificazione temporale}}{8}{figure.caption.22}
-\contentsline {figure}{\numberline {3.2}{\ignorespaces UC1 - Sistema}}{10}{figure.caption.26}
-\contentsline {figure}{\numberline {3.3}{\ignorespaces UC2 - Sistema}}{10}{figure.caption.28}
-\contentsline {figure}{\numberline {3.4}{\ignorespaces UC3 - Sistema}}{11}{figure.caption.30}
-\contentsline {figure}{\numberline {3.5}{\ignorespaces UC1.2 - Calibrazione camera}}{12}{figure.caption.33}
-\contentsline {figure}{\numberline {3.6}{\ignorespaces UC1.4 - Selezione Sprite}}{13}{figure.caption.36}
-\contentsline {figure}{\numberline {3.7}{\ignorespaces UC3.2 - Condivisione Interna}}{15}{figure.caption.42}
-\contentsline {figure}{\numberline {3.8}{\ignorespaces UC3.3 - Condivisione Facebook}}{16}{figure.caption.44}
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Pianificazione temporale}}{9}{figure.caption.44}
+\contentsline {figure}{\numberline {3.2}{\ignorespaces UC1 - Sistema}}{11}{figure.caption.48}
+\contentsline {figure}{\numberline {3.3}{\ignorespaces UC2 - Sistema}}{11}{figure.caption.50}
+\contentsline {figure}{\numberline {3.4}{\ignorespaces UC3 - Sistema}}{12}{figure.caption.52}
+\contentsline {figure}{\numberline {3.5}{\ignorespaces UC1.2 - Calibrazione camera}}{13}{figure.caption.55}
+\contentsline {figure}{\numberline {3.6}{\ignorespaces UC1.4 - Selezione Sprite}}{14}{figure.caption.58}
+\contentsline {figure}{\numberline {3.7}{\ignorespaces UC3.2 - Condivisione Interna}}{16}{figure.caption.64}
+\contentsline {figure}{\numberline {3.8}{\ignorespaces UC3.3 - Condivisione Facebook}}{17}{figure.caption.66}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {4.1}{\ignorespaces Long caption}}{24}{figure.caption.66}
-\contentsline {figure}{\numberline {4.2}{\ignorespaces Image Pyramid}}{34}{figure.caption.153}
-\contentsline {figure}{\numberline {4.3}{\ignorespaces Sliding Template Matching}}{36}{figure.caption.175}
-\contentsline {figure}{\numberline {4.4}{\ignorespaces Correlation matching method formula}}{37}{figure.caption.192}
-\contentsline {figure}{\numberline {4.5}{\ignorespaces Coefficiente normalizzato}}{37}{figure.caption.193}
-\contentsline {figure}{\numberline {4.6}{\ignorespaces Correlation matching method formula (normed)}}{37}{figure.caption.194}
-\contentsline {figure}{\numberline {4.7}{\ignorespaces Risultato visivo della triangolazione}}{38}{figure.caption.196}
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Long caption}}{25}{figure.caption.88}
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Image Pyramid}}{35}{figure.caption.176}
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Sliding Template Matching}}{37}{figure.caption.198}
+\contentsline {figure}{\numberline {4.4}{\ignorespaces Correlation matching method formula}}{38}{figure.caption.215}
+\contentsline {figure}{\numberline {4.5}{\ignorespaces Coefficiente normalizzato}}{38}{figure.caption.216}
+\contentsline {figure}{\numberline {4.6}{\ignorespaces Correlation matching method formula (normed)}}{38}{figure.caption.217}
+\contentsline {figure}{\numberline {4.7}{\ignorespaces Costo computazionale al variare della dimensione del volto}}{39}{figure.caption.218}
+\contentsline {figure}{\numberline {4.8}{\ignorespaces Variazione dinamica della ROI in base alla fedelt\IeC {\`a}}}{40}{figure.caption.219}
+\contentsline {figure}{\numberline {4.9}{\ignorespaces Risultato visivo della triangolazione}}{41}{figure.caption.221}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {6.1}{\ignorespaces Grafico prestazionale riassuntivo, Input Video}}{50}{figure.caption.213}
-\contentsline {figure}{\numberline {6.2}{\ignorespaces Grafico prestazionale riassuntivo, Condizioni Ottimali, Input Camera}}{51}{figure.caption.214}
-\contentsline {figure}{\numberline {6.3}{\ignorespaces Grafico prestazionale riassuntivo, Bassa luminosit\IeC {\`a}, Input Camera}}{51}{figure.caption.215}
-\contentsline {figure}{\numberline {6.4}{\ignorespaces Grafico prestazionale, differenza tra camera anteriore e posteriore}}{52}{figure.caption.216}
+\contentsline {figure}{\numberline {6.1}{\ignorespaces Grafico prestazionale riassuntivo, Input Video}}{53}{figure.caption.238}
+\contentsline {figure}{\numberline {6.2}{\ignorespaces Grafico prestazionale riassuntivo, Condizioni Ottimali, Input Camera}}{54}{figure.caption.239}
+\contentsline {figure}{\numberline {6.3}{\ignorespaces Grafico prestazionale riassuntivo, Bassa luminosit\IeC {\`a}, Input Camera}}{54}{figure.caption.240}
+\contentsline {figure}{\numberline {6.4}{\ignorespaces Grafico prestazionale, differenza tra camera anteriore e posteriore}}{55}{figure.caption.241}
+\addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }

@@ -20,11 +20,8 @@ Le linee guida di Google per gli sviluppatori indicano che è necessario:
 \item Creare le classi desiderate per la Business Logic
 \end{itemize}
 
-Partendo dal presupposto che il pattern MVC non è universalmente unico
 
-Essendo una applicazione che lavorerà principalmente in real-time, particolare attenzione è stata dedicata alla creazione di oggetti dinamici (in modo da evitare rallentamenti dovuti all'azione di pulizia del \textit{Garbage Collector} )
-
-Vengono quindi definiti per ordine di peso i seguenti 7 Packages:
+Vengono definiti i seguenti 7 Packages:
 
 \begin{itemize}
 \item Activity
@@ -38,7 +35,7 @@ Vengono quindi definiti per ordine di peso i seguenti 7 Packages:
 
 \subsection{Package Activity}
 
-Le activity sono uno dei 4 elementi di base che vanno a costituire un'applicazione:
+L'activity è uno dei 4 elementi di base che vanno a costituire un'applicazione:
 
 \begin{itemize}
 \item Activity
@@ -63,10 +60,16 @@ L'attività richiesta in tale progetto consiste in una view che permetta di mand
 Vengono quindi definite le seguenti Activity:
 \begin{itemize}
 
+\item \textbf{Activity::FaceDetectionBase}
+
+\textit{Estende:} Activity.
+
+\textit{Descrizione ed utilizzo:} Definisce gli elementi comuni alle activity \textit{Activity::FaceDetectionActivity} e \textit{Activity::StaticFaceDetectionActivity}.
+
 
 \item \textbf{Activity::FaceDetectionActivity}
 
-\textit{Estende:} Activity.
+\textit{Estende:} Activity::FaceDetectionBase.
 
 \textit{Implementa:} CvCameraViewListener2.
 
@@ -74,7 +77,7 @@ Vengono quindi definite le seguenti Activity:
 
 \item \textbf{Activity::StaticFaceDetectionActivity}
 
-\textit{Estende:} Activity. 
+\textit{Estende:} Activity::FaceDetectionBase.
 
 \textit{Descrizione ed utilizzo:} Simile a FaceDetectionActivity, ma la sua funzione è statica, ossia l'eventuale rilevamento si basa su immagini statiche inserite dall'utente (scattate al momento o caricate direttamente dallo smartphone).
 
@@ -83,6 +86,13 @@ Vengono quindi definite le seguenti Activity:
 \textit{Estende:} Activity.
 
 \textit{Descrizione ed utilizzo:} Attività che permette di salvare l'eventuale fotografia scattata e di condividerla attraverso mail,servizi di messaggistica e Facebook.
+
+\item \textbf{Activity::ErrorHandlerActivity}
+
+\textit{Estende:} Activity.
+
+\textit{Descrizione ed utilizzo:} classe dedicata alla segnalazione degli errori. Ogni qual volta venga lanciata un'eccezione, questa verrà gestita ed inoltrata ad un'activity dedicata che possa fornire allo sviluppatore il log completo dell'errore (direttamente all'interno dell'applicazione senza il bisogno di controllare il Logcat). Sarà possibile attraverso un apposito botto tornare alla sezione che ha causato il crash per appurarne le dinamiche.
+
 
 \item \textbf{Activity::TutorialActivity}
 
@@ -201,6 +211,12 @@ Contiene le seguenti classi:
 \textit{Descrizione ed utilizzo:} Classe la cui instanza viene utilizzata per il caricamento di dati grezzi all'interno della ListView (utilizzata per la scelta degli Sprite o delle applicazioni disponibili per la condivisione).
 
 \end{itemize}
+
+\section{Dettagli in fase di codifica}
+
+\textbf{1:} Essendo una applicazione che lavora principalmente in real-time, particolare attenzione è stata dedicata alla creazione di oggetti dinamici (in modo da evitare rallentamenti dovuti all'azione di pulizia del \textit{Garbage Collector})
+
+\textbf{2:} Normalmente per la fruizione delle librerie OpenCV è necessario installare all'interno del dispositivo l'applicazione OpenCV Manager, che si occupa di precaricare le librerie e di renderle disponibili. Data la scomodità di tale soluzione, si è preferito compilare le librerie senza il Manager ed aggiungerle staticamente direttamente nell'applicazione.
 
 \newpage
 
@@ -531,11 +547,57 @@ Si definisce infine il metodo CV\_TM\_CCORR\_NORMED come:
 \label{pic-a}
 \end{figure}
 
-Vi sono anche metodi basati sulla differenza di quadrati ma si è preferito utilizzare dei metodi piu sofisticati in quanto assicurano risultati migliori (tenendo conto della bassa qualità dei fotogrammi in entrata dovuta a fotocamere con sensori ridotti).
+Vi sono anche metodi basati sulla differenza di quadrati ma si è preferito utilizzare dei metodi piu sofisticati in quanto assicurano risultati migliori (tenendo conto della bassa qualità dei fotogrammi in entrata dovuta a fotocamere con sensori ridotti). 
 
+Per aumentare le prestazioni dei sistema sono state effettuate alcune considerazioni a partire dalla meccanica delle librerie OpenCV.
 
+		\begin{figure}[H]\centering  
+\includegraphics[scale=0.7]{/workspace/1911_up/Dropbox/thesis/Figures/scala.png}
+\caption[Costo computazionale al variare della dimensione del volto]{Costo computazionale al variare della dimensione del volto}
+\label{pic-a}
+\end{figure}
 
+	Dal momento che ogni singolo frame viene valutato nella sua interezza da un classificatore si è deciso di:
 
+	\begin{itemize}
+	\item Effettuare ogni \textit{X} millisecondi uno scan completo fino alla massima profondità in modo da rilevare eventuali nuovi volti.
+	\item Se sono stati rilevati nuovi volti allora:
+	 	\begin{itemize}
+			\item Fisso una nuova profondità massima di scan.
+		\end{itemize}
+	\item Altrimenti:
+		\begin{itemize}
+			\item Utilizzo la medesima profondità massima di scan.
+		\end{itemize}
+	\end{itemize}
+	
+
+	Inoltre, se per \textit{Z} millisecondi non vi sono volti nuovi, l'area di ricerca si ridurrà dinamicamente fino a corrispondere al K per cento (K>110 per compensare le naturali oscillazioni della testa) della dimensione dell'ultimo volto rilevato (e sarà centrata sullo stesso centro).
+	
+			\begin{figure}[H]\centering  
+\includegraphics[scale=0.25]{/workspace/1911_up/Dropbox/thesis/Figures/tempo2.png}
+\caption[Variazione dinamica della ROI in base alla fedeltà]{Variazione dinamica della ROI in base alla fedeltà}
+\label{pic-a}
+\end{figure}
+	
+	In tal modo si permette di migliorare notevolmente le prestazioni (nello specifico più il volto sarà vicino alla camera più il sistema sarà performante).
+
+	Riassumendo:
+	\begin{itemize}
+	\item Per ogni frame un classificatore Haar viene utilizzato per il rilevamento il volto
+	\item Per ogni sottoinsieme di frames positivi per \textit{X} frames viene utilizzato un classificatore Haar per ricavare un template
+	\item Per ogni sottoinsieme di frames positivi per \textit{$N-X$} frames viene effettuato template matching 
+	\end{itemize}
+	
+	\textbf{Perchè non effettuare template matching anche per il volto?}
+
+	La tecnica di template matching ha un costo generalmente molto più basso rispetto all'utilizzo di un classificatore ma:
+	
+	\begin{itemize}
+	\item è fotometricamente molto rigido rispetto alle variazioni di luminosità
+	\item è geometricamente troppo rigido per essere valido a seguito di variazioni di forma
+	\item non ha alcuna strategia per eventuali rilevamenti sovrapposti
+	\end{itemize}
 
 \newpage
 \subsection{Stima della posa}
@@ -569,9 +631,34 @@ Dai test effettuati su un prototipo usa e getta sono state evidenziate le seguen
 \item Tale approccio può funzionare solo se l'utilizzatore dell'applicazione è unico (non viene gestito il caso in cui la camera trovi più di un volto)
 \end{itemize}			
 
-OpenCV fornisce altri strumenti molto potenti come ad esempio \textit{CamShift} ma non è stata possibile un'implementazione a causa dei vincoli sulla tabella di lavoro. Pertanto non è stato possibile eseguire uno studio di fattibilità adeguato per la risoluzione di tale problematica. 
+OpenCV fornisce altri strumenti molto potenti come ad esempio \textit{CamShift} ma non è stata possibile un'implementazione a causa dei vincoli temporali sulla tabella di lavoro. Pertanto non è stato possibile eseguire uno studio di fattibilità che potesse risolvere pienamente tale problematica. 
 
 
 \newpage
-\subsection{Calibrazione dinamica}
+\subsection{Memorizzazione volti}
+
+L'applicazione deve essere in grado di rilevare anche più di un volto. Requisito non richiesto ma ritenuto interessante da sviluppare è tenere traccia dei volti.
+	Vi possono essere due possibili scenari:
+	
+	\textbf{Scenario 1:} Applicazione avviata con 2 volti rilevati:
+	\begin{itemize}
+	\item il primo volto a partire da sinistra sarà identificato come il volto numero 1
+	\item il secondo volto a partire da sinistra sarà identificato come il volto numero 2
+	\end{itemize}
+	
+	\textbf{Scenario 2:} Applicazione avviata un solo volto rilevato:
+	\begin{itemize}
+	\item l'unico volto a partire da sinistra sarà identificato come il volto numero 1
+	\item appare un volto a destra del primo, sarà identificato come il volto numero 2
+	\end{itemize}
+	
+	\textbf{Scenario 2 - alternativo:} Applicazione avviata un solo volto rilevato:
+	\begin{itemize}
+	\item l'unico volto a partire da sinistra sarà identificato come il volto numero 1
+	\item appare un volto a sinistra del primo, sarà identificato come il volto numero 1 (mentre il precedente diventerà il numero 2)
+	\end{itemize}
+	
+	Nello scenario alternativo, se una persona provasse degli occhiali in realtà aumentata ma intervenisse nella scena da sinistra un altra persona, perderebbe il "focus" e pertanto gli occhiali verrebbero renderizzati sul volto della seconda persona. 
+	
+	Per evitare tale scenario, è stata definita una funzione che potesse permettere di "ricordare" posizione e fedeltà dei volti. La fedeltà è necessaria in quanto può capitare che il rilevamento non sia efficace in alcuni frame, e si deve evitare che il render dell'occhiale generi sfarfallii non gradevoli.
 

@@ -33,6 +33,7 @@
 \usepackage{setspace}
 \usepackage{listings}
 \usepackage{color}
+\usepackage{xcolor}
 \usepackage{float}
 \definecolor{dkgreen}{rgb}{0,0.6,0}
 \definecolor{gray}{rgb}{0.5,0.5,0.5}
@@ -64,7 +65,13 @@
 %\hypersetup{urlcolor=red, colorlinks=true} % Colors hyperlinks in blue - change to black if annoying
 \title{\ttitle} % Defines the thesis title - don't touch this
 
-
+\newcommand*{\glossaryname}{Dictionary}
+\usepackage[nonumberlist]{glossaries}
+\newcommand{\dictentry}[2]{%
+  \newglossaryentry{#1}{name=#1,description={#2}}%
+  \glslink{#1}{}%
+}
+\makeglossaries
 
 \begin{document}
 
@@ -103,7 +110,7 @@ Corso di Laurea in Informatica}\\[1.0cm] % Thesis type
 \includegraphics[scale=0.15]{/workspace/1911_up/Dropbox/thesis/Figures/logo_uni_bw.png}\\[1.5cm]
 
 %\HRule \\[0.4cm] % Horizontal line
-{\huge \bfseries Face Detection Engine su piattaforma Android}\\[2.5cm] % Thesis title
+{\huge \bfseries Definizione di librerie per il rilevamento di features facciali e per l'integrazione social su piattaforma Android}\\[2.5cm] % Thesis title
 %\HRule \\[1.5cm] % Horizontal line
  
 \begin{minipage}{0.4\textwidth}
@@ -150,8 +157,9 @@ Essa è suddivisa nei seguenti capitoli:
 
 \end{itemize}
 
+\clearpage % Start a new page
 
-\clearpage
+\vspace*{7cm}
 \textbf{Convenzioni tipografiche}\\
 
 
@@ -169,13 +177,16 @@ convenzioni tipografiche:
 %----------------------------------------------------------------------------------------
 %	LIST OF CONTENTS/FIGURES/TABLES PAGES
 %----------------------------------------------------------------------------------------
-
+\hypersetup{linkbordercolor=black}
 \pagestyle{fancy} % The page style headers have been "empty" all this time, now use the "fancy" headers as defined before to bring them back
-
-\lhead{\emph{Contents}} % Set the left side page header to "Contents"
+\renewcommand*\contentsname{Contenuti}
+\lhead{\emph{Contenuti}} % Set the left side page header to "Contents"
 \tableofcontents % Write out the Table of Contents
 
-\lhead{\emph{List of Figures}} % Set the left side page header to "List of Figures"
+
+
+\lhead{\emph{Lista delle Figure}} % Set the left side page header to "List of Figures"
+\renewcommand*\listfigurename{Lista delle Figure}
 \listoffigures % Write out the List of Figures
 
 
