@@ -39,11 +39,11 @@ Comunque si scelga l'algoritmo, le problematiche che si incontrano nella ricerca
 
 Data la complessità del problema è difficile creare una soluzione unica che abbia un'accuratezza soddisfacente. Una delle strade migliori è costruire un classificatore e collezionare una grande database di esempi di classificazione, creare una funzione di classificazione parametrizzata e successivamente ottimizzarla. Questa metodologia è definita machine learning. 
 
-Ne è un esempio la tecnica di rilevamento facciale sviluppato da Paul Viola e Michael Jones che utilizza le cosidette \textit{diagonal features} all'interno di un classificatore chiamato \textit{Haar}. Questo classificatore utilizza un algoritmo di tipo AdaBoost (Adaptive Boosting) ma lo organizza come una cascata di nodi dove ogni nodo è un un multialbero di classificatori AdaBoost istruiti per avere un altissimo rate di rilevamento. Tale "istruzione" deriva dal training dato dalle Haar-like features ricavate da immagini digitali. Queste immagini contengono volti normalizzati (scalati e traslati) correttamente per un rapporto 1:6000 rispetto al totale delle immagini utilizzate (le rimanenti non rappresentano facce).
+Ne è un esempio la tecnica di rilevamento facciale sviluppato da Paul Viola e Michael Jones che utilizza le cosidette \textit{diagonal features} all'interno di un classificatore chiamato \textit{Haar}. Questo classificatore utilizza un algoritmo di tipo \textbf{\textit{AdaBoost}} (Adaptive Boosting) ma lo organizza come una cascata di nodi dove ogni nodo è un un multialbero di classificatori AdaBoost istruiti per avere un altissimo rate di rilevamento. Tale "istruzione" deriva dal training dato dalle Haar-like features ricavate da immagini digitali. Queste immagini contengono volti normalizzati (scalati e traslati) correttamente per un rapporto 1:6000 rispetto al totale delle immagini utilizzate (le rimanenti non rappresentano facce).
 
 
 \begin{figure}[H]\centering  
-\includegraphics[scale=0.35]{/home/nicgen/Scrivania/thesis/Figures/feature.jpg}
+\includegraphics[scale=0.35]{/workspace/1911_up/Dropbox/thesis/Figures/feature.jpg}
 \caption[Esempio di utilizzo delle features]{Esempio di utilizzo delle features}
 \label{pic-a}
 \end{figure}
@@ -59,7 +59,7 @@ Il valore \textit{k} trovato per la feature \textit{f} è sotto o sopra a una ce
 Tipicamente i nodi sono ordinati dal meno al più complesso (i primi nodi sono generalmente molto semplici). In tal modo si può ridurre notevolmente il costo computazionale di rilevamento del volto, perché le regioni dell'immagine che non lo contengono terminano subito nei primissimi nodi se non al primo.
 
 \begin{figure}[H]\centering  
-\includegraphics[scale=0.3]{/home/nicgen/Scrivania/thesis/Figures/boosted.png}
+\includegraphics[scale=0.3]{/workspace/1911_up/Dropbox/thesis/Figures/boosted.png}
 \caption[Binary Rejection cascade]{Binary Rejection cascade}
 \label{pic-a}
 \end{figure}
@@ -79,12 +79,12 @@ Una relazione sociale costruita sulla base di un interesse è totalmente differe
 L'idea alla base di quest'ultima rete è che ogni utente possa avere uno scambio bidirezionale di informazioni con altri utenti. In un'era in cui buona parte della popolazione mondiale utilizza tale strumento di comunicazione, è quindi spesso fondamentale integrare al software funzionalità di condivisione.
 
 \begin{figure}[H]\centering  
-\includegraphics[scale=0.7]{/home/nicgen/Scrivania/thesis/Figures/snetwork.png}
+\includegraphics[scale=0.45]{/workspace/1911_up/Dropbox/thesis/Figures/snetwork.png}
 \caption[Mappa distribuzione Social Networks]{Mappa distribuzione Social Networks, Dicembre 2013}
 \label{pic-a}
 \end{figure}
 
-A seguito di un'analisi sul target di mercato, l'Azienda ha deciso di utilizzare il Social Network Facebook che, come in figura, è tra i più utilizzati a livello globale. Inoltre Facebook fornisce agli sviluppatori delle \textit{SDK} che permettono di ottenere una grande mole di informazioni sull'utente che installa l'applicazione e sull'ambiente attraverso cui comunica (numeri di telefono, e-mail, nominativi dei conoscenti, fotografie, etc.). Tali informazioni, se gestite correttamente, possono essere fondamentali per comprendere se il prodotto venga effettivamente utilizzato dal mercato per cui l'applicazione è stata concepita.
+A seguito di un'analisi sul target di mercato del cliente, l'Azienda ha deciso di utilizzare il Social Network Facebook che, come in figura, è tra i più utilizzati a livello globale. Inoltre Facebook fornisce agli sviluppatori delle \textit{SDK} che permettono di ottenere una grande mole di informazioni sull'utente che installa l'applicazione e sull'ambiente attraverso cui comunica (numeri di telefono, e-mail, nominativi dei conoscenti, fotografie, etc.). Tali informazioni, se gestite correttamente, possono essere fondamentali per comprendere se il prodotto venga effettivamente utilizzato dal mercato per cui l'applicazione è stata concepita.
 
 %----------------------------------------------------------------------------------------
 

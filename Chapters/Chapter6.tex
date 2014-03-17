@@ -157,27 +157,41 @@ I test sono stati effettuati con i seguenti parametri precedentemente definiti i
 
 In questo modo ci si assicura che il costo computazionale per ogni frame sia massimo (il metodo di rilevamento facciale terminerà solo dopo aver valutato l'immagine nella sua interezza). 
 Dato che per ogni singolo frame vi possono essere più hits corrispondenti allo stesso volto, è stata creata una semplice funzione ad hoc che permetta di contare un solo volto per set coincidenti di hits. Inoltre tali video sono stati velocizzati aumentando il framerate (24$\longmapsto$ 72 fotogrammi per secondo) per evitare qualsiasi problema di Input bound.
+\\
 
-
-\begin{figure}[h]\centering  
-\includegraphics[scale=0.6]{/home/nicgen/Scrivania/thesis/Figures/fps.png}
-\caption[Grafico prestazionale riassuntivo]{Graifco prestazionale riassuntivo}
+\begin{figure}[H]\centering  
+\includegraphics[scale=0.75]{/workspace/1911_up/Dropbox/thesis/Figures/fps.png}
+\caption[Grafico prestazionale riassuntivo, Input Video]{Grafico prestazionale riassuntivo, Input Video}
 \label{pic-a}
 \end{figure}
 
-Come previsto, al variare dei dispositivi non vi è alcuna differenza nei risultati (quantità di volti rilevati + $\varepsilon$(falsi positivi rilevati)) se non al variare del parametro \textit{FaceDetectionActivity::MinNeighbors}. Infatti,prendendo come risoluzione di riferimento $640 \ast 480$, sono stati ottenuti i seguenti risultati
-\\
-GRAFICO A RES FISSA CON NUM FALSI POSITIVI E NEGATIVI AL VARIARE DELLA RETENTION 
-\\
-I risultati sono però stati totalmente differenti nell'utilizzo reale utilizzando la fotocamera posteriore come input al posto dei video (che garantivano un framerate costante di 72 fotogrammi per secondo). 
-\\
-GRAFICO LUMINOSITA NORMALE
+Come previsto, al variare dei dispositivi non vi è alcuna differenza nei risultati (quantità di volti rilevati + $\varepsilon$(falsi positivi rilevati)) se non al variare del parametro \textit{FaceDetectionActivity::MinNeighbors}. Dal punto di vista puramente prestazionale, i risultati sono però stati totalmente differenti nell'utilizzo reale utilizzando la fotocamera posteriore come input (contrariamente ai video che garantivano un framerate costante di 72 fotogrammi per secondo). 
 
-GRAFICO LUMINOSITA BASSA
-\\
+
+\begin{figure}[H]\centering  
+\includegraphics[scale=0.75]{/workspace/1911_up/Dropbox/thesis/Figures/luce.png}
+\caption[Grafico prestazionale riassuntivo, Condizioni Ottimali, Input Camera]{Grafico prestazionale riassuntivo, Condizioni Ottimali, Input Camera}
+\label{pic-a}
+\end{figure}
+
+
+
+
+\begin{figure}[H]\centering  
+\includegraphics[scale=0.75]{/workspace/1911_up/Dropbox/thesis/Figures/buio.png}
+\caption[Grafico prestazionale riassuntivo, Bassa luminosità, Input Camera]{Grafico prestazionale riassuntivo, Bassa luminosità, Input Camera}
+\label{pic-a}
+\end{figure}
+
+
+
 Infine si può notare come vi siano grosse discrepanze di prestazioni al variare della fotocamera d'input (Anteriore o Posteriore). Questo è dovuto al fatto che generalmente la fotocamera posteriore è di qualità maggiore (sensore di dimensioni maggiori, diaframma più aperto ed ISO che può raggiungere valori più elevati)
 \\
-GRAFICO FRONTALE VS POSTERIORE
+\begin{figure}[H]\centering  
+\includegraphics[scale=0.75]{/workspace/1911_up/Dropbox/thesis/Figures/antvspost.png}
+\caption[Grafico prestazionale, differenza tra camera anteriore e posteriore]{Grafico prestazionale, differenza tra camera anteriore e posteriore}
+\label{pic-a}
+\end{figure}
 
 \subsection{Considerazioni}
 

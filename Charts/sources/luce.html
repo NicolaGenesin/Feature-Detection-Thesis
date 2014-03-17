@@ -7,9 +7,9 @@
 <div id="chart_container">Loading chart...</div>
 <script type="text/javascript">
 	var myChart = new JSChart('chart_container', 'line', '');
-	myChart.setDataArray([[1, 42],[5, 35],[9, 23]], 'Galaxy S4');
-myChart.setDataArray([[1, 28],[5, 23],[9, 15]], 'Galaxy S3 Mini');
-myChart.setDataArray([[1, 16],[5, 12],[9, 7]], 'Galaxy Fame');
+	myChart.setDataArray([[1, 34.5],[5.5, 27.1],[10, 18.3]], 'Galaxy S4');
+myChart.setDataArray([[1, 25],[5.5, 21],[10, 14]], 'Galaxy S3 Mini');
+myChart.setDataArray([[1, 12.8],[5.5, 9],[10, 4]], 'Galaxy Fame');
 	myChart.colorize(['#3E90C9','#3E90C9','#3E90C9']);
 	myChart.setSize(450, 450);
 	myChart.setAxisValuesNumberY(5);
@@ -22,6 +22,8 @@ myChart.setDataArray([[1, 16],[5, 12],[9, 7]], 'Galaxy Fame');
 	myChart.setShowXValues(false);
 	myChart.setTitleColor('#454545');
 	myChart.setAxisValuesColor('#454545');
+	myChart.setLineColor('#A4D314', 'green');
+	myChart.setLineColor('#BBBBBB', 'gray');
 	myChart.setTooltip([1,'']);
 	myChart.setTooltip([2,'']);
 	myChart.setTooltip([3,'']);
@@ -49,5 +51,3 @@ myChart.setDataArray([[1, 16],[5, 12],[9, 7]], 'Galaxy Fame');
 </script>
 </body>
 </html>
-
-

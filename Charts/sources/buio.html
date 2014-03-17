@@ -7,21 +7,23 @@
 <div id="chart_container">Loading chart...</div>
 <script type="text/javascript">
 	var myChart = new JSChart('chart_container', 'line', '');
-	myChart.setDataArray([[1, 42],[5, 35],[9, 23]], 'Galaxy S4');
-myChart.setDataArray([[1, 28],[5, 23],[9, 15]], 'Galaxy S3 Mini');
-myChart.setDataArray([[1, 16],[5, 12],[9, 7]], 'Galaxy Fame');
+	myChart.setDataArray([[1, 21],[5.5, 20.4],[10, 18.3]], 'Galaxy S4');
+myChart.setDataArray([[1, 21],[5.5, 20],[10, 13]], 'Galaxy S3 Mini');
+myChart.setDataArray([[1, 9],[5.5, 6],[10, 4]], 'Galaxy Fame');
 	myChart.colorize(['#3E90C9','#3E90C9','#3E90C9']);
 	myChart.setSize(450, 450);
 	myChart.setAxisValuesNumberY(5);
 	myChart.setIntervalStartY(0);
 	myChart.setIntervalEndY(45);
 	myChart.setLabelX([1,'320*240']);
-	myChart.setLabelX([5,'640*480']);
-	myChart.setLabelX([9,'1280*720']);
+	myChart.setLabelX([5.5,'640*480']);
+	myChart.setLabelX([10,'1280*720']);
 	myChart.setAxisValuesNumberX(5);
 	myChart.setShowXValues(false);
 	myChart.setTitleColor('#454545');
 	myChart.setAxisValuesColor('#454545');
+	myChart.setLineColor('#A4D314', 'green');
+	myChart.setLineColor('#BBBBBB', 'gray');
 	myChart.setTooltip([1,'']);
 	myChart.setTooltip([2,'']);
 	myChart.setTooltip([3,'']);
@@ -49,5 +51,3 @@ myChart.setDataArray([[1, 16],[5, 12],[9, 7]], 'Galaxy Fame');
 </script>
 </body>
 </html>
-
-

@@ -9,9 +9,7 @@ Ad aggravare la situazione, i cambiamenti effettuati non sempre sono documentati
 
 \section{Architettura}
 
-
-
-Il concetto di MVC sul sistema operativo Android è piuttosto vago. Infatti la filosofia delle API è incentrata sulla derivazione piuttosto che sulla composizione, il che rende anche difficile fare dei test accurati.
+La documentazione Android non definisce dei pattern architetturali da seguire, e non rende semplice sviluppo di pattern noti (view e controller sono fortemente accoppiati). Inoltre la filosofia delle API è incentrata sulla derivazione piuttosto che sulla composizione, il che rende anche difficile fare dei test accurati.
 
 Le linee guida di Google per gli sviluppatori indicano che è necessario:
 
@@ -21,6 +19,10 @@ Le linee guida di Google per gli sviluppatori indicano che è necessario:
 \item Estendere classi come ListActivity,TabActivity e utilizzare i sopracitati XML attraverso l'uso di inflaters
 \item Creare le classi desiderate per la Business Logic
 \end{itemize}
+
+Partendo dal presupposto che il pattern MVC non è universalmente unico
+
+Essendo una applicazione che lavorerà principalmente in real-time, particolare attenzione è stata dedicata alla creazione di oggetti dinamici (in modo da evitare rallentamenti dovuti all'azione di pulizia del \textit{Garbage Collector} )
 
 Vengono quindi definiti per ordine di peso i seguenti 7 Packages:
 
@@ -51,7 +53,7 @@ Ci può essere solo una Activity attiva per volta, quindi una sola Activity per 
 A seguire il modello di ciclo di vita di una Activity:
 
 \begin{figure}[h]\centering  
-\includegraphics[scale=0.38]{/home/nicgen/Scrivania/thesis/Figures/ciclovitaattivita.jpg}
+\includegraphics[scale=0.38]{/workspace/1911_up/Dropbox/thesis/Figures/ciclovitaattivita.jpg}
 \caption[Long caption]{Caption}
 \label{pic-a}
 \end{figure}
@@ -243,7 +245,7 @@ Di seguito viene indicata la mappatura Classi$\rightarrow$ Requisiti.
     \end{longtable}
 \end{center}
 
-I requisiti non mappati corrispondono a richieste dell'azienda ospitante avvenute in corso d'opera, posteriori allo studio dell'architettura di sistema.
+I requisiti non mappati corrispondono a richieste dell'azienda avvenute in corso d'opera, posteriori allo studio dell'architettura di sistema.
 
 \section{Tecnologie utilizzate}
 
@@ -254,7 +256,7 @@ In una normale applicazione Android non c'è un entry point (il classico metodo 
 
 \subsection{Android NDK}
 
-L'NDK (Native Development Kit) è uno strumento che permette di implementare parte dell'applicazione usando codice scritto in linguaggio nativo come il C ed il C++. Per alcune applicazioni può essere utile in quanto si può riutilizzare le librerie scritte in tali linguaggi. L'uso di tale strumento non da però beneficio per la maggior parte delle applicazioni ed è da usare quindi con parsimonia (spesso l'aumento delle performance dovuto all'utilizzo di codice nativo non giustifica l'aumento di complessità). Tipicamente buoni candidati sono programmi che sono CPU-intensive che non allocano molta memoria come simulazioni fisiche ed analisi dei segnali. Nel caso specifico sono stati effettuati dei test per verificare se la quantità di chiamate verso la libreria C/C++ OpenCV giustifica tale strumento. Tale libreria è stata utilizzata per prototipi usa e getta ed è stata successivamente scartata per l'esiguo vantaggio prestazionale rispetto al notevole aumento della dimensione e complessità del codice.
+L'NDK (Native Development Kit) è uno strumento che permette di implementare parte dell'applicazione usando codice scritto in linguaggio nativo come il C ed il C++. Per alcune applicazioni può essere utile in quanto si può riutilizzare le librerie scritte in tali linguaggi. L'uso di tale strumento non da però beneficio per la maggior parte delle applicazioni ed è da usare quindi con parsimonia (spesso l'aumento delle performance dovuto all'utilizzo di codice nativo non giustifica l'aumento di complessità). Tipicamente buoni candidati sono programmi che sono CPU-intensive che non allocano molta memoria come simulazioni fisiche ed analisi dei segnali. Nel caso specifico sono stati effettuati dei test per verificare se la quantità di chiamate verso la libreria C/C++ OpenCV giustifica tale strumento. Tale libreria è stata utilizzata per prototipi usa e getta ed è stata successivamente scartata su richiesta dell'azienda.
 
 \subsection{Android Studio}
 
@@ -427,7 +429,7 @@ Di particolare valore è il metodo \textit{detectMultiScale(const Mat image, vec
  \item \textit{scaleFactor}: indica di quanto la dimensione dell'immagine è ridotta ad ogni scaling. Si crea quindi una piramide di immagini in cui l'immagine in posizione k è di dimensioni inferiori all'immagine in posizione k-1. Maggiore sarà questo valore, minore sarà il costo computazionale ma lo sarà anche il rate di rilevamento.
 
 \begin{figure}[h]\centering  
-\includegraphics[scale=0.8]{/home/nicgen/Scrivania/thesis/Figures/pyramid.jpg}
+\includegraphics[scale=0.8]{/workspace/1911_up/Dropbox/thesis/Figures/pyramid.jpg}
 \caption[Image Pyramid]{Image Pyramid}
 \label{pic-a}
 \end{figure} 
@@ -478,7 +480,7 @@ Una volta creato il template, per i frame successivi verrà utilizzato \textit{m
 Il template matching utilizzato per mezzo del metodo OpenCV \textit{$matchTemplate(...)$} non è basato su istogrammi ma è basato sul match di un template che viene fatto "scivolare" contro un'immagine di input.\\
 
 \begin{figure}[H]\centering  
-\includegraphics[scale=0.8]{/home/nicgen/Scrivania/thesis/Figures/slide.png}
+\includegraphics[scale=0.8]{/workspace/1911_up/Dropbox/thesis/Figures/slide.png}
 \caption[Sliding Template Matching]{Sliding Template Matching}
 \label{pic-a}
 \end{figure}
@@ -506,7 +508,7 @@ Come si può vedere dalla funzione è stato utilizzato il metodo TM\_CCORR\_NORM
 Utilizzando \textit{I} per denotare l'immagine in ingresso, \textit{T} per il template si definisce il metodo CV\_TM\_CCORR (Correlation matching method) come: 
 
 \begin{figure}[H]\centering  
-\includegraphics[scale=0.3]{/home/nicgen/Scrivania/thesis/Figures/rcor.png}
+\includegraphics[scale=0.3]{/workspace/1911_up/Dropbox/thesis/Figures/rcor.png}
 \caption[Correlation matching method formula]{Correlation matching method formula}
 \label{pic-a}
 \end{figure}
@@ -516,7 +518,7 @@ Dal momento che il template viene moltiplicato contro l'immagine, un match perfe
 Di tale metodo ne esiste una versione normalizzata che è utile perchè può ridurre gli effetti di differenze di luce tra l'immagine in ingresso ed il template utilizzato. Il coefficiente di normalizzazione viene definito come:
 
 \begin{figure}[H]\centering  
-\includegraphics[scale=0.3]{/home/nicgen/Scrivania/thesis/Figures/z.png}
+\includegraphics[scale=0.3]{/workspace/1911_up/Dropbox/thesis/Figures/z.png}
 \caption[Coefficiente normalizzato]{Coefficiente normalizzato}
 \label{pic-a}
 \end{figure}
@@ -524,7 +526,7 @@ Di tale metodo ne esiste una versione normalizzata che è utile perchè può rid
 Si definisce infine il metodo CV\_TM\_CCORR\_NORMED come:
 
 \begin{figure}[H]\centering  
-\includegraphics[scale=0.38]{/home/nicgen/Scrivania/thesis/Figures/rccor.png}
+\includegraphics[scale=0.38]{/workspace/1911_up/Dropbox/thesis/Figures/rccor.png}
 \caption[Correlation matching method formula (normed)]{Correlation matching method formula (normed)}
 \label{pic-a}
 \end{figure}
@@ -551,7 +553,7 @@ Pertanto sono state considerate solamente le seguenti parti:
 Per valutare la fattibilità è stata creata una semplice funzione che imprimesse direttamente sul fotogramma un triangolo i cui vertici corrispondono alle parti sopracitate.
 
 \begin{figure}[H]\centering  
-\includegraphics[scale=0.38]{/home/nicgen/Scrivania/thesis/Figures/face1_triangle.png}
+\includegraphics[scale=0.38]{/workspace/1911_up/Dropbox/thesis/Figures/face1_triangle.png}
 \caption[Risultato visivo della triangolazione]{Risultato visivo della triangolazione}
 \label{pic-a}
 \end{figure}

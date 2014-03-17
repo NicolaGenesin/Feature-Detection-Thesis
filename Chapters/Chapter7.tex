@@ -64,7 +64,19 @@ parti o che il risultato non è stato raggiunto in modo soddisfacente. Colore as
 \newpage
 \section{Prodotto finale}
 
+Il progetto realizzato ha raggiunto un discreto grado di maturità. L'intento dell'Azienda di verificare la fattibilità di questo progetto ha avuto un esito che, seppur a posteriori, non è facile valutare. Nonostante non vi siano stati grandi problemi di integrazione con le librerie utilizzate, le prestazioni che ci si aspettava sono state raggiunte solo per terminali di fascia alta del mercato. Lag e rallentamenti possono invece pregiudicare negativamente l'esperienza d'utilizzo dell'applicazione nei terminali di fascia media. Personalmente ritengo sarebbe stato necessario uno studio di fattibilità più approfondito per evidenziare meccaniche o tecnologie potenzialmente più performanti. Nonostante la potenza computazionale degli odierni smartphone sia in continua crescita, ritengo comunque sia necessario creare una struttura scalabile che sia il più possibile indipendente dall'hardware su cui essa dovrà girare, e che non si adagi sulla potenza bruta piuttosto che su un buon sistema. 
 
+Personalmente ritengo che l'utilizzo delle attuali librerie wrapper Java per OpenCV non possano garantire quanto appena definito (sono infatti numerose le chiamate JNI verso codice nativo C/C++ aventi un costo molto elevato). 
+
+Dal punto di vista funzionale, l'applicazione rispetta gli obiettivi definiti nelle fasi preliminari con i seguenti limiti:
+
+\begin{itemize}
+\item accuratezza elevata per volti perfettamente frontali
+\item accuratezza elevata per volti di profilo (utilizzando un template differente)
+\item accuratezza scarsa per volti inclinati e/o ruotati
+\end{itemize}
+
+Tali limiti sono però relativi in quanto dipendono da quale classificatore viene utilizzato per il rilevamento della parte indicata. Nel corso di tale progetto sono stati individuati classificatori istruiti di dimensioni molto ridotte in modo da ridurre al minimo il costo di computazione (\textit{http:\/\/alereimondo.no\-ip.org\/OpenCV\/34}). 
 
 \section{Conoscenze acquisite}
 
