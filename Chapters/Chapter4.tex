@@ -20,11 +20,15 @@ Le linee guida di Google per gli sviluppatori indicano che è necessario:
 \item Creare le classi desiderate per la Business Logic
 \end{itemize}
 
+Dal momento che Android mal si adatta al pattern architetturale MVC (forte accoppiamento View-Controller) si è preferito utilizzare il pattern MVP.
+MVP è acronimo di Model-View-Presenter, ed ha come obiettivo quello di separare la User Interface dal Model e dalla sua logica formita dal Presenter.
+In Android, la View p costituita da una classe detta Activity, che gestisce e raccoglie gli input utente e aggiorna il display. Il Presenter è invece una classe che gestisce la comunicazione tra il Model e la View. Il Model infine archivia e riceve i dati, lungo qualsiasi business logic a cui i dati devono aderire.
+Le interfacce sono utilizzate per disaccoppiare ogni componente.
 
 Vengono definiti i seguenti 7 Packages:
 
 \begin{itemize}
-\item Activity
+\item Activity (ogni classe conterrà un Presenter dedicato)
 \item Service
 \item DataModel
 \item Core
